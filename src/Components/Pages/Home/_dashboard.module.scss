@@ -1,61 +1,80 @@
 @import '../../../app/mixins';
 
 .section_home {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     @include flex (center, center, row);
     padding-bottom: 130px;
-    // display: grid;
-    // grid-template-columns: 30% , 70%;
-    column-gap: 110px;
+    column-gap: 100px;
+
+    @media (max-width : 375px) {
+        height: fit-content;
+        @include flex (start, center, column);
+        row-gap: 10px;
+        padding: 84px 0 20px 0;
+        
+    }
 
     @media (min-width : 1441px) {
         column-gap: 150px;
     }
 
-        @keyframes borderAnimation {
-            0% {
-                border-radius: 60% 40% 35% 70% /60% 40% 70% 40%;
-            }
+    // @keyframes borderAnimation {
+    //     0% {
+    //         border-radius: 60% 40% 35% 70% /60% 40% 70% 40%;
+    //     }
 
-            25% {
-                border-radius: 35% 65% 60% 40% / 50% 40% 35% 40%;
-            }
+    //     25% {
+    //         border-radius: 35% 65% 60% 40% / 50% 40% 35% 40%;
+    //     }
 
-            50% {
-                border-radius: 60% 40% 35% 70% /60% 40% 70% 40%;
-            }
+    //     50% {
+    //         border-radius: 60% 40% 35% 70% /60% 40% 70% 40%;
+    //     }
 
-            75% {
-                border-radius: 50% 40% 35% 60% / 35% 65% 50% 40%;
-            }
+    //     75% {
+    //         border-radius: 50% 40% 35% 60% / 35% 65% 50% 40%;
+    //     }
 
-            100% {
-                border-radius: 60% 40% 35% 70% /60% 40% 70% 40%;
-                
-            }
+    //     100% {
+    //         border-radius: 60% 40% 35% 70% /60% 40% 70% 40%;
+
+    //     }
+    // }
+
+    // &__left {
+    //     width: 300px;
+    //     height: 323px;
+    //     margin-left: 50px;
+    //     // Work
+    //     border-radius: 60% 40% 35% 70% /60% 40% 70% 40%;
+    //     border: 2px solid rgba(0, 0, 0, 0.25);
+    //     animation: borderAnimation 9s ease infinite;
+    //     overflow: hidden;
+
+    // }
+
+    img {
+        margin-bottom: 60px;
+
+        @media (max-width : 375px) {
+            width: 234px;
+            height: 215px;
         }
-
-    &__left {
-        width: 300px;
-        height: 323px;
-        // background-color: $gray-100;
-        // background-image: url('/src/app/Image/email-illustration.png');
-        margin-left: 50px;
-        // Work
-        border-radius: 60% 40% 35% 70% /60% 40% 70% 40%;
-        border: 2px solid rgba(0, 0, 0, 0.25);
-        animation: borderAnimation 9s ease infinite;
-        overflow: hidden;
-
     }
 
     &__right {
-        margin-left: 20px;
+        // margin-left: 20px;
         width: fit-content;
         height: fit-content;
         @include flex (start, start, column);
         row-gap: 20px;
+
+        @media (max-width : 375px) {
+            row-gap: 12px;
+            // margin-left: 0;
+
+        }
 
         h1 {
             height: fit-content;
@@ -66,14 +85,17 @@
             letter-spacing: text-space(60, 17);
             @include text-linear-primary;
 
-        }
-
-        @media (min-width : 1441px) {
-            h1 {
+            @media (min-width : 1441px) {
                 font-size: 69px;
                 width: 682px;
             }
 
+            @media (max-width : 375px) {
+                font-size: 28px;
+                width: 282px;
+                line-height: 32px;
+                letter-spacing: text-space(28, 16);
+            }
         }
 
         p {
@@ -84,16 +106,27 @@
             color: $gray-secondary;
             letter-spacing: text-space(14.3, 3);
 
+            @media (max-width : 375px) {
+                font-size: 10px;
+                width: 282px;
+                letter-spacing: 0;
+            }
+
             span {
                 @include text-linear-primary;
             }
-
         }
 
         .container_button {
             @include flex (start, center, row);
             column-gap: 25px;
             margin-top: 20px;
+            @media (max-width : 375px) {
+                margin-top: 8px;
+                width: 100%;
+                justify-content: center;
+            }
         }
+
     }
 }

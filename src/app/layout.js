@@ -24,11 +24,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <NavBar />
-        <SocialMedia/>
+        {/* <SocialMedia/> */}
         {children}
         {/* <Animation/> */}
-        <Mouse/>
-        <Footer/>
+        {/* <Mouse/> */}
+        {/* <Footer/> */}
       </body>
     </html>
   );

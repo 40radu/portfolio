@@ -1,12 +1,12 @@
 @import '../../../app/mixins';
 
 .contact_section {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     padding-top: 100px;
     @include flex (start, center, column);
     row-gap: 60px;
-
+    position: relative;
     .container_form {
         @include flex(center,center,row);
         column-gap: 180px;

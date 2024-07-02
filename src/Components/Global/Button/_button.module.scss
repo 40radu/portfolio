@@ -11,10 +11,25 @@
     @include flex (center, center, row);
     box-shadow: 4px 4px 4px 0 $black-25;
     transition: 0.35s;
+    width: fit-content;
+    height: fit-content;
+
+    @media (max-width : 375px) {
+        font-size: 12px;
+        letter-spacing: text-space(12, 4);
+        padding: 6px 20px 3px 20px;
+    }
 
     &:hover {
         letter-spacing: text-space(18, 8);
         padding: 9px 45px 4px;
+
+        @media (max-width : 375px) {
+            letter-spacing: text-space(12, 8);
+            padding: 6px 24px 3px 24px;
+
+        }
+
     }
 }
 

@@ -87,24 +87,24 @@ function Contact() {
             body.style.overflow = 'auto'
     }
 
-    useGSAP(() => {
+    // useGSAP(() => {
 
-        gsap.registerPlugin(ScrollTrigger)
+    //     gsap.registerPlugin(ScrollTrigger)
 
-        gsap.from(imageContainer.current, {
-            scrollTrigger:{
-                // markers: true,
-                trigger:imageContainer.current,
-                start:'top 50%',
-                toggleActions:'restart none none reverse',
-            },
-            duration: 2.25,
-            rotateZ:65,
-            opacity:0,
-            ease:'elastic'
+    //     gsap.from(imageContainer.current, {
+    //         scrollTrigger:{
+    //             // markers: true,
+    //             trigger:imageContainer.current,
+    //             start:'top 50%',
+    //             toggleActions:'restart none none reverse',
+    //         },
+    //         duration: 2.25,
+    //         rotateZ:65,
+    //         opacity:0,
+    //         ease:'elastic'
 
-        })
-    } , { scope: imageContainer})
+    //     })
+    // } , { scope: imageContainer})
 
     return (
         <section className={styles.contact_section} id='contact'>
