@@ -1,7 +1,7 @@
 @import '../../../app/mixins';
 
 .navBar_container {
-    width: 100%;
+    width: 100vw;
     padding: 26px 50px 0 80px;
     @include flex (space-between, center, row);
     background-color: transparent;
@@ -9,5 +9,9 @@
     top: 0;
     left: 0;
     z-index:40;
-    // backdrop-filter: blur(2px);
+    height: fit-content;
+    @media (max-width : 375px) {
+        padding: 10px 10px 10px 16px;
+    }
 }
+

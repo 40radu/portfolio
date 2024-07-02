@@ -9,6 +9,7 @@
 // import LogoSkills from "@/Components/Skills/LogoSkills/LogoSkills";
 // import SocialMedia from "@/Components/Global/SocialMedia/SocialMedia";
 import StatutResponse from "@/Components/Contact/StatutResponse/StatutResponse";
+import Logo from "@/Components/Logo/Logo";
 import About from "@/Components/Pages/About/About";
 import Contact from "@/Components/Pages/Contact/Contact";
 import Dashboard from "@/Components/Pages/Home/Dashboard";
@@ -22,11 +23,12 @@ export default function Home() {
     <main >
       {/* <Animation/> */}
       {/* <SocialMedia/> */}
-      {/* <Dashboard /> */}
-      {/* <About/> */}
-      {/* <Skills/> */}
+      <Dashboard />
+      <About/>
+      <Skills/>
       <Contact/>
       {/* <StatutResponse isError={true}/> */}
+      {/* <Logo/> */}
       
     </main>
   );

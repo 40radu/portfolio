@@ -1,7 +1,10 @@
+"use client"
+
 import React, { useRef } from 'react'
 import styles from './_Logo.module.scss'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
+import Link from 'next/link'
 
 function Logo() {
 
@@ -30,10 +33,10 @@ function Logo() {
   })
 
   return (
-    <div className={styles.logo} >
+    <Link href={'#home'} className={styles.logo} >
         <p className={styles.logo__top} ref={logoTop} >Portfolio</p>
         <p className={styles.logo__bottom} ref={logoBottom} >Radonirina</p>
-    </div>
+    </Link>
   )
 }
 
