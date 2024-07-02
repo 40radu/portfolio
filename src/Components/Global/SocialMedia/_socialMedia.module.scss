@@ -1,0 +1,31 @@
+@import '../../../app/mixins';
+
+.socialMedia_container {
+    @include flex (start, center, column);
+    row-gap: 26px;
+    width: fit-content;
+    height: fit-content;
+    // margin-top: 500px;
+
+    position: fixed;
+    left: 80px;
+    top: 44%;
+    
+
+    &::after {
+        content: "";
+        width: 2px;
+        height: 55px;
+        margin-top: 10px;
+        background-color: $blue-primary;
+    }
+
+    img {
+        cursor: pointer;
+        transition: 0.35s;
+        
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}

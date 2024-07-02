@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './mixins';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Khula";
+    scroll-behavior: smooth;
+}
+
+.__className_1deade {
+    background-color: white;
+    color: black;
+}

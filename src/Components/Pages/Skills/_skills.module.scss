@@ -1,0 +1,27 @@
+@import '../../../app/mixins';
+
+.skills_section {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 100px;
+    @include flex (start,center, column);
+    row-gap: 60px;
+    overflow: hidden;
+
+
+    .skills_containers {
+        width: 100%;
+        height: fit-content;
+        @include flex (center, start, column);
+        row-gap: 35px   ;
+        .top , .center, .bottom {
+            @include flex (center, center, row);
+            column-gap: 145px;
+            width: 100%;
+        }
+
+        .center {
+            column-gap: 235px;
+        }
+    }
+}

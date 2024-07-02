@@ -1,0 +1,45 @@
+@import '../../app/mixins';
+
+.menu_bar {
+    // margin-left: 10px;
+    @include flex (center, center, row);
+    padding: 9px 14px;
+    column-gap: 25px;
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    // border: 1px solid white;
+    // transition: 2s;
+    backdrop-filter: blur(2px);
+    // opacity: 100%;
+
+
+    p {
+        width: 73px;
+        height: 27px;
+        font-size: 24px;
+        font-weight: 800;
+        letter-spacing: text-space(24, 5);
+        -webkit-text-stroke: 1.5px $black-35;
+        color: $white;
+        text-transform: uppercase;
+        text-align: center;
+        text-shadow: 1px 1px 1px $black-25;
+        scale: 0.8;
+    }
+
+}
+
+.containerNavigation {
+    width: 100vw;
+    height: 100vh;
+    @include flex (center, center, column);
+    position: fixed;
+    right: -102%;
+    top: 0;
+    z-index: -20;
+    background-color: white;
+    border-left: 1px dashed black;
+}

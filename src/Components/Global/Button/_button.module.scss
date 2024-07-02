@@ -1,0 +1,28 @@
+@import "../../../app/mixins";
+
+.btn-primary {
+    padding: 9px 40px 4px;
+    border-radius: 18px;
+    color: $white;
+    @include background-linear-primary;
+    font-size: 18px;
+    letter-spacing: text-space(18, 4);
+    font-weight: 600;
+    @include flex (center, center, row);
+    box-shadow: 4px 4px 4px 0 $black-25;
+    transition: 0.35s;
+
+    &:hover {
+        letter-spacing: text-space(18, 8);
+        padding: 9px 45px 4px;
+    }
+}
+
+.btn-secondary {
+    @extend .btn-primary;
+    @include text-linear-primary;
+    background-color: $white;
+    border-top: solid 0.5px rgba(0, 0, 0, 0.10);
+    box-shadow: 3.5px 3.5px 3.5px 0 $black-25;
+
+}
