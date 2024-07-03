@@ -15,6 +15,7 @@
             width: fit-content;
             height: fit-content;
             position: relative;
+            padding-bottom: 12.5px;
 
             p {
                 @include text-linear-primary;

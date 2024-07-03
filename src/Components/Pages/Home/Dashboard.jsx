@@ -19,38 +19,38 @@ function Dashboard() {
     const rightContainer = useRef()
 
 
-    // useGSAP(() => {
-    //     gsap.registerPlugin(ScrollTrigger);
+    useGSAP(() => {
+        gsap.registerPlugin(ScrollTrigger);
 
-    //     gsap.to(homeSection.current, {
-    //         scrollTrigger: {
-    //             // markers: true,
-    //             trigger: homeSection.current,
-    //             end:"bottom 30%",
-    //             start: "top top",
-    //             scrub:1,
+        gsap.to(homeSection.current, {
+            scrollTrigger: {
+                // markers: true,
+                trigger: homeSection.current,
+                end:"bottom 30%",
+                start: "top top",
+                scrub:1,
 
-    //         },
-    //         opacity: 0,
-    //         duration:10           
-    //     })
+            },
+            opacity: 0,
+            duration:10           
+        })
 
-    //     gsap.from(leftContainer.current, {
-    //         delay:0.8,
-    //         duration:1,
-    //         scale:0.8
-    //     })
-    //     gsap.from(rightContainer.current, {
-    //         delay:0.8,
-    //         duration:1,
-    //         scale:0.8
-    //     })
+        gsap.from(leftContainer.current, {
+            delay:0.8,
+            duration:1,
+            scale:0.8
+        })
+        gsap.from(rightContainer.current, {
+            delay:0.8,
+            duration:1,
+            scale:0.8
+        })
 
-    // }, {scope : homeSection})
+    }, {scope : homeSection})
 
     return (
         <section className={` block ${styles.section_home}`} id='dashboard' ref={homeSection}>
-            {/* <Animation /> */}
+            <Animation />
 
             {/* <div className={styles.section_home__left} ref={leftContainer}> */}
                 <Image src={image} alt='' ref={leftContainer}/>

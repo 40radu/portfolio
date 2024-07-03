@@ -24,8 +24,8 @@ export default function Home() {
       {/* <Animation/> */}
       {/* <SocialMedia/> */}
       <Dashboard />
-      {/* <About/>
-      <Skills/>
+      <About/>
+      {/* <Skills/>
       <Contact/> */}
       {/* <StatutResponse isError={true}/> */}
       {/* <Logo/> */}

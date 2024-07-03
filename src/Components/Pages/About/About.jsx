@@ -27,7 +27,7 @@ function About() {
         // gsap.set ( textDescription, {xPercent: -100})
         gsap.from(textDescription, {
             scrollTrigger :{
-                markers : true, 
+                // markers : true, 
                 trigger:textDescription,
                 start:"top 65%", 
                 endTrigger:about_section.current,

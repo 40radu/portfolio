@@ -5,6 +5,10 @@
     height: fit-content;
     @include flex (start, center, column);
 
+    @media (max-width : 375px) {
+        padding-right: 10px;
+    }
+
     h2 {
         width: fit-content;
         height: 139px;
@@ -16,7 +20,12 @@
         text-transform: uppercase;
         text-shadow: 3px 3px 1px $black-35;
         position: relative;
-        // @include flex (space-between, center, row)
+
+        @media (max-width : 375px) {
+            height: 70px;
+            font-size: 64px;
+            letter-spacing: text-space(64, 7);
+        }
     }
 
     &__center {
@@ -26,6 +35,12 @@
         @include flex (space-between, center, row);
         column-gap: 40px;
 
+        @media (max-width : 375px) {
+            padding: 0;
+            column-gap: 10px;
+            padding: 0 8px 0 10px;
+        }
+
         &::before {
             content: "";
             width: 100%;
@@ -34,6 +49,12 @@
             background-color: $gray-45;
             border-bottom: 0.5px $blue-50;
             border-style: dotted;
+
+            @media (max-width : 375px) {
+                height: 4px;
+                margin-top: 0;
+                padding-left: 8px;
+            }
 
         }
 
@@ -49,12 +70,24 @@
             column-gap: 17px;
             text-transform: capitalize;
 
+            @media (max-width : 375px) {
+                height: fit-content;
+                font-size: 10px;
+                letter-spacing: text-space(10, 8);
+                column-gap: 8px;
+            }
+
             &::after {
                 content: "";
                 width: 10px;
                 height: 10px;
                 background-color: $red;
                 border-radius: 20px 0;
+
+                @media (max-width : 375px) {
+                    width: 8px;
+                    height: 8px;
+                }
 
             }
         }
@@ -68,5 +101,12 @@
         text-transform: uppercase;
         margin-top: 28px;
         padding-right: 15px;
+
+        @media (max-width : 375px) {
+            font-size: 9px;
+            letter-spacing: text-space(9, 4);
+            margin-top: 15px;
+        }
+
     }
 }
