@@ -10,8 +10,9 @@
     overflow: hidden;
 
     @media (max-width : 375px) {
-        padding-top: 84px;
+        padding: 84px 0;
         row-gap: 5px;
+        height: fit-content;
     }
 
     .more_description {

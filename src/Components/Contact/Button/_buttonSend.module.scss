@@ -9,6 +9,21 @@
     border-radius: 50px;
     transition: 0.25s;
 
+    @media (max-width : 375px) {
+        width: 100%;
+        height: fit-content;
+        padding: 10px;
+        column-gap: 10px;
+    }
+
+    img {
+    @media (max-width : 375px) {
+        width: 18px;
+        height: 18px;
+    }
+
+    }
+
     p {
         height: 22px;
         font-size: 17px;
@@ -16,6 +31,12 @@
         color: $white;
         font-weight: 700;
         text-transform: capitalize;
+
+        @media (max-width : 375px) {
+            height: 17px;
+            font-size: 14px;
+            letter-spacing: text-space(14, 12);
+        }
     }
 
     &:hover {
@@ -25,6 +46,7 @@
 
     &:disabled {
         opacity: 0.6;
+
         &:hover {
             width: 460px;
             letter-spacing: text-space(17, 12);

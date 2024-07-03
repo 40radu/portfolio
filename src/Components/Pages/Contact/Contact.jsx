@@ -16,7 +16,7 @@ import StatutResponse from '@/Components/Contact/StatutResponse/StatutResponse'
 
 function Contact() {
 
-    const imageContainer = useRef(null)
+    const imageCont = useRef(null)
     const [buttonDisable, setButtonDisable] = useState(true)
     const [enableResponse, setEnableResponse] = useState(false)
     const [isSucces, setIsSucces] = useState(true)
@@ -91,10 +91,10 @@ function Contact() {
 
         gsap.registerPlugin(ScrollTrigger)
 
-        gsap.from(imageContainer.current, {
+        gsap.from(imageCont.current, {
             scrollTrigger:{
                 // markers: true,
-                trigger:imageContainer.current,
+                trigger:imageCont.current,
                 start:'top 50%',
                 toggleActions:'restart none none reverse',
             },
@@ -104,7 +104,7 @@ function Contact() {
             ease:'elastic'
 
         })
-    } , { scope: imageContainer})
+    } , { scope: imageCont})
 
     return (
         <section className={styles.contact_section} id='contact'>
@@ -115,7 +115,7 @@ function Contact() {
 
             <div className={styles.container_form}>
                 <div className={styles.image_section} >
-                    <Image src={emailIllustration} alt='' ref={imageContainer} />
+                    <Image src={emailIllustration} alt='' ref={imageCont} />
                     <p>radurakotoarivelo@gmail.com</p>
                 </div>
                 <form className={styles.form} onSubmit={handleSubmitForm}>

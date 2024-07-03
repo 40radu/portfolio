@@ -4,24 +4,71 @@
     width: 100%;
     min-height: 100vh;
     padding-top: 100px;
-    @include flex (start,center, column);
+    @include flex (start, center, column);
     row-gap: 60px;
     overflow: hidden;
-
+    position: relative;
+    @media (max-width : 375px) {
+        padding: 84px 0;
+    }
 
     .skills_containers {
         width: 100%;
         height: fit-content;
         @include flex (center, start, column);
-        row-gap: 35px   ;
-        .top , .center, .bottom {
+        row-gap: 35px;
+
+        @media (max-width : 375px) {
+            padding: 0px 20px;
+            row-gap: 30px;
+        }
+
+        .top,
+        .center,
+        .bottom {
             @include flex (center, center, row);
             column-gap: 145px;
             width: 100%;
+
+            @media (max-width : 375px) {
+                flex-wrap: wrap;
+                column-gap: 50px;
+                row-gap: 20px;
+            }
         }
 
         .center {
             column-gap: 235px;
+            @media (max-width : 375px) {
+                flex-wrap: wrap;
+                column-gap: 50px;
+                row-gap: 20px;
+            }
+        }
+
+        .bottom {
+            @media (max-width : 375px) {
+                display: none;
+            }
+        }
+
+        .btn_showMore {
+            font-size: 13px;
+            letter-spacing: text-space(13,5);
+            font-weight: 600;
+            background-color: $black-35;
+            color: $white;
+            padding: 6px 12px 4px 12px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+
+            @media (max-width : 375px){
+                display: block;
+            }
         }
     }
 }

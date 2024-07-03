@@ -6,7 +6,7 @@
     @include flex (start, center, column);
 
     @media (max-width : 375px) {
-        padding-right: 10px;
+        padding-right: 8px;
     }
 
     h2 {
@@ -23,8 +23,8 @@
 
         @media (max-width : 375px) {
             height: 70px;
-            font-size: 64px;
-            letter-spacing: text-space(64, 7);
+            font-size: 66px;
+            letter-spacing: text-space(66, 7);
         }
     }
 
@@ -54,6 +54,7 @@
                 height: 4px;
                 margin-top: 0;
                 padding-left: 8px;
+                width: 100%;
             }
 
         }

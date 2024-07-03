@@ -3,8 +3,21 @@
 .logo_container {
     width: 100px;
     height: 100px;
-    @include flex(center,center,row);
+    @include flex(center, center, row);
     border: 1px dashed $black-25;
     border-radius: 50%;
     position: relative;
+
+    @media (max-width: 375px) {
+        width: fit-content;
+        height: fit-content;
+        padding: 20px;
+    }
+
+    img {
+        @media (max-width: 375px) {
+            width: 46px;
+            height: 46px;
+        }
+    }
 }

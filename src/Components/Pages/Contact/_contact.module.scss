@@ -2,38 +2,71 @@
 
 .contact_section {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 100px;
     @include flex (start, center, column);
     row-gap: 60px;
     position: relative;
+
+    @media (max-width : 375px) {
+        padding-top: 84px;
+        padding-bottom: 20px;
+        row-gap: 15px;
+    }
+
+
+
     .container_form {
-        @include flex(center,center,row);
+        @include flex(center, center, row);
         column-gap: 180px;
-        
+
+        @media (max-width : 375px) {
+            flex-direction: column;
+            width: 100%;
+            row-gap: 40px;
+        }
+
         .image_section {
             width: fit-content;
             height: fit-content;
             position: relative;
             padding-bottom: 12.5px;
 
+            img {
+                @media (max-width : 375px) {
+                    width: 234px;
+                    height: 215px;
+                }
+            }
+
             p {
                 @include text-linear-primary;
                 font-size: 10px;
                 font-weight: 700;
-                letter-spacing: text-space(10,18);
+                letter-spacing: text-space(10, 18);
                 position: absolute;
                 bottom: 0;
                 left: 105px;
-            
+
+                @media (max-width : 375px) {
+                    font-size: 8px;
+                    letter-spacing: text-space(8, 18);
+                    left: 35px;
+                }
+
             }
         }
 
         .form {
             @include flex (center, center, column);
             row-gap: 10px;
+
+            @media (max-width : 375px) {
+                padding: 0 20px;
+                width: 100%;
+            }
         }
     }
 
-    
+
 }
