@@ -7,14 +7,25 @@
     @include flex (center, center, row);
     column-gap: 10px;
     background-color: $gray-45;
+    @media (max-width : 375px) {
+        height: 40px;
+    }
     img {
         opacity: 0.98;
+
+        @media (max-width : 375px) {
+            width: 18px;
+            height: 18px;
+        }
     }
     p {
         color: $blue-primary;
         font-size: 16px;
         font-weight: 700;
         height: 21px;
-        
+        @media (max-width : 375px) {
+           font-size: 12px;
+           height: 15px;
+        }
     }
 }

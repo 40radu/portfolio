@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
         {children}
         {/* <Animation/> */}
         {/* <Mouse/> */}
-        {/* <Footer/> */}
+        <Footer/>
       </body>
     </html>
   );

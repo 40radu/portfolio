@@ -37,8 +37,8 @@ function About() {
             }, 
             xPercent : -100,
             delay:0.1,
-            duration:1,
-            stagger :0.35,
+            duration:0.75,
+            stagger :0.25,
             opacity : 0
 
         })
