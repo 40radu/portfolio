@@ -4,7 +4,6 @@
     width: 44px;
     height: 68px;
     @include flex (end, center, column);
-    // padding: 9px 11px;
     background-image: linear-gradient(#fff, #fff), $gradient-primary;
     border: double 1px transparent;
     background-origin: border-box;
@@ -15,25 +14,13 @@
     position: fixed;
     left: 50%;
     bottom: 52px;
-    // animation: mousePosition 10s ease-in-out infinite;
     backdrop-filter: blur(1px);
     z-index: 9;
 
+    @media (max-width : 375px) {
+        display: none;
+    }
     img {
         margin-bottom: 9px;
     }
-
-    // @keyframes mousePosition {
-    //     0% {
-    //         bottom: 52px;
-    //     }
-    //     50% {
-    //         bottom: 72px;
-            
-    //     }
-    //     100% {
-    //         bottom: 52px;
-            
-    //     }
-    // }
 }

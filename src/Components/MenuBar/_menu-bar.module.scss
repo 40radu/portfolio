@@ -15,12 +15,13 @@
     backdrop-filter: blur(2px);
     // opacity: 100%;
 
-    @media (max-width : 375px) {
+
+    @include mediaTabPortrait {
         padding: 10px 10px 14px 10px;
     }
 
     img {
-        @media (max-width : 375px) {
+        @include mediaTabPortrait {
             width: 34px;
             height: 32px;
         }
@@ -39,7 +40,7 @@
         text-shadow: 1px 1px 1px $black-25;
         scale: 0.8;
 
-        @media (max-width : 375px) {
+        @include mediaTabPortrait  {
             display: none;
         }
     }
@@ -55,5 +56,10 @@
     top: 0;
     z-index: -20;
     background-color: white;
-    border-left: 1px dashed black;
+    border-left: 1px dashed $black-35;
+
+
+    @include mediaTabPortrait  {
+        row-gap: 20px;
+    }
 }

@@ -1,9 +1,9 @@
 @import '../../app/mixins';
 
 
-.home_container {
+.link_container {
     text-decoration: none;
-    @include flex (center, center,row);
+    @include flex (center, center, row);
     width: 100%;
 
     p {
@@ -15,7 +15,13 @@
         text-shadow: 3px 3px 1px $black-35;
         font-size: 128px;
         font-weight: 800;
-        letter-spacing: text-space(128,12);
+        letter-spacing: text-space(128, 12);
+
+        @media (max-width : 375px) {
+            font-size: 64px;
+            letter-spacing: text-space(64, 4);
+            height: 75px;
+        }
     }
 
     div {
@@ -24,5 +30,11 @@
         border: solid 1px $black-35;
         margin-top: 35px;
         opacity: 0;
+
+        @media (max-width : 375px) {
+            width: 12px;
+            height: 12px;
+            margin-top: 10px;
+        }
     }
 }

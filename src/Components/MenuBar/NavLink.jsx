@@ -20,7 +20,7 @@ function NavLink({ text, href , onClick}) {
     }
 
     return (
-        <Link href={href} onMouseEnter={mouseEnter} className={styles.home_container} ref={linkRef} onMouseLeave={mouseLeave} onClick={onClick}>
+        <Link href={href} onMouseEnter={mouseEnter} className={styles.link_container} ref={linkRef} onMouseLeave={mouseLeave} onClick={onClick}>
             <p>{text}</p>
             <div className={styles.rectangle} ref={rectRef}></div>
         </Link>

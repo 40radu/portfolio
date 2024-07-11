@@ -24,7 +24,7 @@ function MenuBar() {
     if (menu === 'Menu') {
       body.style.overflow = 'hidden'
       gsap.to(navBar, {
-        right: 0,
+        right:"0",
         duration: 0.65,
         delay: 0.25,
         // ease: 'back'
@@ -32,7 +32,7 @@ function MenuBar() {
       });
       gsap.from(navLink, {
         ease: 'back',
-        marginRight: '300px',
+        marginRight: '16%',
         duration: 0.35,
         delay: 0.95,
         letterSpacing: '0'
@@ -86,12 +86,12 @@ function MenuBar() {
         <Image src={icon} alt='menu_icon' />
       </div>
 
-     {false &&  <nav className={styles.containerNavigation}>
+       <nav className={styles.containerNavigation}>
         <NavLink href={'#home'} text={'home'} onClick={handleClickMenu} />
         <NavLink href={'#about'} text={'about'} onClick={handleClickMenu} />
         <NavLink href={'#skills'} text={'skills'} onClick={handleClickMenu} />
         <NavLink href={'#contact'} text={'contact'} onClick={handleClickMenu} />
-      </nav>}
+      </nav>
 
     </>
   )

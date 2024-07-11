@@ -1,7 +1,7 @@
 @import '../../../app/mixins';
 
 .contact_section {
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     padding-top: 100px;
     @include flex (start, center, column);
@@ -9,12 +9,10 @@
     position: relative;
 
     @media (max-width : 375px) {
-        padding-top: 84px;
+        padding-top: 105px;
         padding-bottom: 20px;
         row-gap: 15px;
     }
-
-
 
     .container_form {
         @include flex(center, center, row);
@@ -54,6 +52,34 @@
                     left: 35px;
                 }
 
+            }
+        }
+
+        .socialMedia {
+            @include flex (center, center, row);
+            column-gap: 18px;
+            display: none;
+
+            @media (max-width:375px){
+                display: flex;
+            }
+
+            &::before {
+                content: '';
+                width: 90px;
+                height: 1px;
+                background-color: $black-25;
+            }
+
+            &::after {
+                content: '';
+                width: 90px;
+                height: 1px;
+                background-color: $black-25;
+            }
+            img {
+                width: 20px;
+                height: 20px;
             }
         }
 

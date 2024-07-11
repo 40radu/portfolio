@@ -6,8 +6,6 @@ import SocialMedia from "@/Components/Global/SocialMedia/SocialMedia";
 import Footer from "@/Components/Layout/Footer/Footer";
 import Mouse from "@/Components/Layout/Mouse/Mouse";
 
-// import Animation from "./Animation";
-
 const inter = Inter({ subsets: ["latin"] });
 // const khula = Inter({ subsets: ["latin"] });
 
@@ -24,10 +22,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <NavBar />
-        {/* <SocialMedia/> */}
+        <SocialMedia/>
         {children}
-        {/* <Animation/> */}
-        {/* <Mouse/> */}
+        <Mouse/>
         <Footer/>
       </body>
     </html>

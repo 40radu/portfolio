@@ -2,14 +2,15 @@
 
 .skills_section {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     padding-top: 100px;
     @include flex (start, center, column);
     row-gap: 60px;
     overflow: hidden;
     position: relative;
     @media (max-width : 375px) {
-        padding: 84px 0;
+        padding: 105px 0 60px 0;
+        height: fit-content;
     }
 
     .skills_containers {
@@ -55,6 +56,7 @@
         .btn_showMore {
             font-size: 13px;
             letter-spacing: text-space(13,5);
+            height: 28px;
             font-weight: 600;
             background-color: $black-35;
             color: $white;

@@ -13,6 +13,9 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import StatutResponse from '@/Components/Contact/StatutResponse/StatutResponse'
+import facebookIcon from '../../../Icons/SocialMedia/facebook.svg'
+import whatsAppIcon from '../../../Icons/SocialMedia/whatsapp.svg'
+import Link from 'next/link'
 
 function Contact() {
 
@@ -67,7 +70,6 @@ function Contact() {
             setButtonContent('send')
             setIsSendNotLoading(true)
             setButtonDisable(true)
-
             setEnableResponse(true)
 
         }).catch((error) => {
@@ -84,7 +86,7 @@ function Contact() {
     function leaveStatut() {
         setEnableResponse(false)
         const body = document.querySelector('body')
-            body.style.overflow = 'auto'
+        body.style.overflow = 'auto'
     }
 
     useGSAP(() => {
@@ -92,19 +94,19 @@ function Contact() {
         gsap.registerPlugin(ScrollTrigger)
 
         gsap.from(imageCont.current, {
-            scrollTrigger:{
+            scrollTrigger: {
                 // markers: true,
-                trigger:imageCont.current,
-                start:'top 50%',
-                toggleActions:'restart none none reverse',
+                trigger: imageCont.current,
+                start: 'top 50%',
+                toggleActions: 'restart none none reverse',
             },
             duration: 2.25,
-            rotateZ:65,
-            opacity:0,
-            ease:'elastic'
+            rotateZ: 65,
+            opacity: 0,
+            ease: 'elastic'
 
         })
-    } , { scope: imageCont})
+    }, { scope: imageCont })
 
     return (
         <section className={styles.contact_section} id='contact'>
@@ -117,6 +119,10 @@ function Contact() {
                 <div className={styles.image_section} >
                     <Image src={emailIllustration} alt='' ref={imageCont} />
                     <p>radurakotoarivelo@gmail.com</p>
+                </div>
+                <div className={styles.socialMedia}>
+                    <Link href={'#'}><Image src={facebookIcon} alt='' /></Link>
+                    <Link href={'#'}><Image src={whatsAppIcon} alt='' /></Link>
                 </div>
                 <form className={styles.form} onSubmit={handleSubmitForm}>
                     <Input

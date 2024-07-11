@@ -3,6 +3,7 @@
 import React from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
+import styles from './_animation.module.scss'
 
 function Animation() {
 
@@ -25,7 +26,7 @@ function Animation() {
 
     })
     gsap.to(bannerRight, {
-      yPercent: 2,
+      yPercent: 2 ,
       yoyo: true,
       duration: 0.25,
       repeat: 1,
@@ -44,11 +45,11 @@ function Animation() {
   return (
     <section className='animation'>
 
-      <div id='banner__left' className=' min-h-screen backdrop-blur-sm bg-white fixed z-50 top-0 left-0 w-1/2 flex justify-end items-center' style={{ fontSize: 55, fontWeight: 800, fontFamily: 'khula', paddingRight: 7.5}}>
-        <p style={{ WebkitTextStroke: "1.5px rgba(0, 0, 0, 0.75)", color: 'white' }}>Welcome To</p>
+      <div id='banner__left' className={`${styles.bannerLeft} min-h-screen backdrop-blur-sm bg-white fixed z-50 top-0 left-0 w-1/2 flex justify-end items-center`} style={{ fontSize: 55, fontWeight: 800, fontFamily: 'khula', paddingRight: 7.5}}>
+        <p style={{ color: 'white' }}>Welcome To</p>
       </div>
 
-      <div id='banner__right' className=' min-h-screen backdrop-blur-sm bg-slate-50 fixed z-50 top-0 left-1/2 w-1/2 text-red-500 flex justify-start items-center' style={{ fontSize: 55, fontWeight: 800, paddingLeft: 7.5, fontFamily: "Khula"}}>
+      <div id='banner__right' className={`${styles.bannerRight} min-h-screen backdrop-blur-sm bg-slate-50 fixed z-50 top-0 left-1/2 w-1/2 text-red-500 flex justify-start items-center`} style={{ fontSize: 55, fontWeight: 800, paddingLeft: 7.5, fontFamily: "Khula"}}>
         <p style={{ backgroundImage: 'linear-gradient(to right, #1B197B, #FF0000)', backgroundSize: '100%', backgroundClip: 'text', color: 'transparent' }}>
           My Portfolio</p>
       </div>

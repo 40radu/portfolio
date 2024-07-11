@@ -49,9 +49,9 @@ function Skills() {
             })
         }
 
-        initAnimation(logoSectionFirst, '52%')
-        initAnimation(logoSectionCenter, '65%')
-        initAnimation(logoSectionBottom, '78%')
+        initAnimation(logoSectionFirst, '72%')
+        initAnimation(logoSectionCenter, '72%')
+        initAnimation(logoSectionBottom, '72%')
 
         gsap.to(skillsSection.current, {
             scrollTrigger: {

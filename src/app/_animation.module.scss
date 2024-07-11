@@ -1,0 +1,21 @@
+@import './mixins';
+
+
+.bannerLeft {
+    p {
+        -webkit-text-stroke: 1.5px rgba(0, 0, 0, 0.75);
+
+        @media (max-width : 375px) {
+            font-size: 28px;
+            -webkit-text-stroke: 1px rgba(0, 0, 0, 0.75);
+        }
+    }
+}
+
+.bannerRight {
+    p {
+        @media (max-width : 375px) {
+            font-size: 28px;
+        }
+    }
+}

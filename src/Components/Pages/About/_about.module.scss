@@ -10,7 +10,7 @@
     overflow: hidden;
 
     @media (max-width : 375px) {
-        padding: 84px 0;
+        padding: 105px 0 60px 0;
         row-gap: 5px;
         height: fit-content;
     }
@@ -27,13 +27,13 @@
         }
 
         p {
-            width: 847px;
+            width: 900px;
             height: fit-content;
             text-align: center;
             font-size: 14.3px;
             font-weight: 700;
             color: $blue-primary;
-            letter-spacing: text-space(14.3, 3);
+            letter-spacing: 1px;
 
             @media (max-width : 375px) {
                 font-size: 12px;
@@ -42,5 +42,10 @@
                 text-align: left;
             }
         }
+    }
+
+    .flowerZone {
+        @include flex(center, center, row);
+        column-gap: 1px;
     }
 }

@@ -19,9 +19,9 @@ function Title({ title, description, underTitle }) {
         trigger: refTitle.current,
         start: "top 85%",
         end: 'top 30%',
-        scrub: true
+        scrub: 1
       },
-      width: "80vw",
+      paddingRight:'14%'
     })
 
     // TITILE DESCRIPTION ANIMATION
@@ -36,7 +36,7 @@ function Title({ title, description, underTitle }) {
         trigger: chars,
         endTrigger: refTitle.current,
         start: 'top 85%',
-        end: 'top 40%',
+        end: 'top 48%',
         scrub: true,
       },
       opacity: 0,

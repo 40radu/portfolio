@@ -30,6 +30,10 @@
         background-color: transparent;
         padding-top: 6px;
         outline: none;
+
+        @media (max-width : 375px) {
+            font-size: 14px;
+        }
         
         &::placeholder {
             color: $black-35;   

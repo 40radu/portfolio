@@ -17,10 +17,10 @@
     }
 
     img {
-    @media (max-width : 375px) {
-        width: 18px;
-        height: 18px;
-    }
+        @media (max-width : 375px) {
+            width: 18px;
+            height: 18px;
+        }
 
     }
 
@@ -42,6 +42,13 @@
     &:hover {
         width: 440px;
         letter-spacing: text-space(17, 8);
+
+        @media (max-width : 375px) {
+            width: 100%;
+            height: fit-content;
+            padding: 10px;
+            column-gap: 10px;
+        }
     }
 
     &:disabled {
@@ -50,6 +57,13 @@
         &:hover {
             width: 460px;
             letter-spacing: text-space(17, 12);
+
+            @media (max-width : 375px) {
+                width: 100%;
+                height: fit-content;
+                padding: 10px;
+                column-gap: 10px;
+            }
         }
     }
 

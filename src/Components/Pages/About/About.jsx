@@ -6,7 +6,9 @@ import Title from '@/Components/Global/Title/Title'
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { splitText } from '@/utils/splitText';
+import decoLeft from '../../../app/Image/deco_flower1.png'
+import decoRight from '../../../app/Image/deco_flower2.png'
+import Image from 'next/image';
 
 
 
@@ -26,37 +28,36 @@ function About() {
 
         // gsap.set ( textDescription, {xPercent: -100})
         gsap.from(textDescription, {
-            scrollTrigger :{
+            scrollTrigger: {
                 // markers : true, 
-                trigger:textDescription,
-                start:"top 65%", 
-                endTrigger:about_section.current,
-                toggleActions : 'restart none none reverse',
-                end:'bottom 65%',
+                trigger: textDescription,
+                start: "top 70%",
+                endTrigger: about_section.current,
+                toggleActions: 'restart none none reverse',
+                end: 'bottom 65%',
                 // scrub:1,
-            }, 
-            xPercent : -100,
-            delay:0.1,
-            duration:0.75,
-            stagger :0.25,
-            opacity : 0
+            },
+            xPercent: -100,
+            duration: 0.5,
+            stagger: 0.25,
+            opacity: 0
 
         })
 
-        gsap.to (about_section.current , {
-            scrollTrigger : {
-                trigger : about_section.current, 
-                start : '20% top',
+        gsap.to(about_section.current, {
+            scrollTrigger: {
+                trigger: about_section.current,
+                start: '20% top',
                 end: '50% top',
                 // markers: true, 
-                scrub : 1
-            }, 
-            opacity : 0,
-            duration : 5, 
-            delay: 1.5,   
+                scrub: 1
+            },
+            opacity: 0,
+            duration: 5,
+            delay: 1.5,
         })
 
-    }, {scope : about_section})
+    }, { scope: about_section })
 
 
     return (
@@ -64,10 +65,10 @@ function About() {
             <Title
                 underTitle={'Self-summary'}
                 title={'about'}
-                description={'[[ HERE,  DISCOVER MY PERSONAL PROFILE  ]]'} 
+                description={'[[ HERE,  DISCOVER MY PERSONAL PROFILE  ]]'}
                 refTitle={title_about}
                 refDescription={titleDescription}
-                />
+            />
 
             <div className={styles.more_description}>
                 <p className='text-description'>Each new challenge is an opportunity for me to grow and improve.
@@ -77,6 +78,12 @@ function About() {
                 <p className='text-description'>Passionate about innovation and technology, I am a developer specializing in creating web and mobile solutions.
                     Since 2023, I have focused my efforts on front-end development, mastering various
                     languages and frameworks. </p>
+
+                <div className={styles.flowerZone}>
+                    <Image src={decoLeft} alt='' />
+                    <Image src={decoRight} alt='' />
+
+                </div>
 
             </div>
         </section>
