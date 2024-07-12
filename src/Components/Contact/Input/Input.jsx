@@ -6,11 +6,11 @@ import emailIcon from '../../../Icons/InputIcon/email.svg'
 
 
 
-function Input({placeholder, name, type, onChange}) {
+function Input({placeholder, name, type, onChange, defaultValue}) {
   return (
     <label className={styles.input_container}>
         <Image src={placeholder === "email"?emailIcon:userIcon} alt=''/>
-        <input type={type} placeholder={placeholder} name={name} onChange={onChange}  />
+        <input type={type} placeholder={placeholder} name={name} onChange={onChange} value={defaultValue} />
     </label>
   )
 }

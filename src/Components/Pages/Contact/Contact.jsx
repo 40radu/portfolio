@@ -23,6 +23,7 @@ function Contact() {
     const [buttonDisable, setButtonDisable] = useState(true)
     const [enableResponse, setEnableResponse] = useState(false)
     const [isSucces, setIsSucces] = useState(true)
+    const [defaultValueInpt , setDefaultValueInpt] = useState('')
 
     const [formData, setFormData] = useState({
         name: '',
@@ -61,6 +62,7 @@ function Contact() {
         setIsSendNotLoading(false)
 
         e.preventDefault()
+
         emailjs.send('service_x4yca0k', 'template_5zjetkr', formData, 'w7dKq_C37hbeLrg4u').then(function (res) {
 
             const body = document.querySelector('body')
@@ -72,6 +74,10 @@ function Contact() {
             setButtonDisable(true)
             setEnableResponse(true)
 
+            e.target[0].value =''
+            e.target[1].value =''
+            e.target[2].value =''
+
         }).catch((error) => {
             const body = document.querySelector('body')
             body.style.overflow = 'hidden'
@@ -79,8 +85,9 @@ function Contact() {
             setButtonContent('send')
             setIsSendNotLoading(true)
             setEnableResponse(true)
-
         })
+
+        setDefaultValueInpt('')
     }
 
     function leaveStatut() {
@@ -129,7 +136,8 @@ function Contact() {
                         placeholder={'name'}
                         name={'name'}
                         type={'text'}
-                        onChange={handleChangeValue} />
+                        onChange={handleChangeValue} 
+                        />
 
                     <Input
                         placeholder={'email'}

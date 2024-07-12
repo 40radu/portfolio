@@ -50,11 +50,11 @@ function Skills() {
 
         initAnimation(logoSectionFirst, '72%')
         initAnimation(logoSectionCenter, '72%')
-        initAnimation(logoSectionBottom, '74%')
+        initAnimation(logoSectionBottom, '75%')
 
         gsap.to(skillsSection.current, {
             scrollTrigger: {
-                markers: true, 
+                // markers: true, 
                 trigger: skillsSection.current,
                 start: '85% top',
                 scrub: 1
