@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
         <NavBar />
         <SocialMedia/>
         {children}
-        <Mouse/>
+        {/* <Mouse/> */}
         <Footer/>
       </body>
     </html>

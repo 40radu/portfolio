@@ -18,21 +18,30 @@ $gray-100 : rgba(217, 217, 217);
 $gray-secondary : rgba(138, 138, 138);
 
 
-$breakpoints : (
-    "tabPortrait" : 768px,
+$breakpoints : ("tabPortrait" : 768px,
 );
 
 @mixin mediaTabPortrait () {
     @media (max-width:map-get($breakpoints, "tabPortrait")) {
-            @content;
+        @content;
     }
 }
 
 @function text-space ($sizeValue, $valueP) {
     @return ((($sizeValue * $valueP)/100)*1px)
-}
+};
 
-;
+@function valueVw ($valuePx){
+    @return (
+        ((($valuePx * 100)/ 1440)*1vw)
+    )
+};
+
+// @function valueVh ($valuePx){
+//     @return (
+//         ((($valuePx * 100)/ 1440)*1vh)
+//     )
+// };
 
 @mixin flex ($content, $items, $direction) {
     display: flex;

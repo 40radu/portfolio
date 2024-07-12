@@ -1,6 +1,5 @@
 @import '../../app/mixins';
 
-
 .link_container {
     text-decoration: none;
     @include flex (center, center, row);
@@ -16,6 +15,13 @@
         font-size: 128px;
         font-weight: 800;
         letter-spacing: text-space(128, 12);
+
+        @include mediaTabPortrait {
+            font-size: 105px;
+            letter-spacing: text-space(110, 8);
+            height: 124px;
+
+        }
 
         @media (max-width : 375px) {
             font-size: 64px;

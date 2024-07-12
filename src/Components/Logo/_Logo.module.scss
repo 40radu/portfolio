@@ -27,8 +27,12 @@
     display: none;
 
     @include mediaTabPortrait {
-      font-size: 9px;
+      font-size: 10px;
       letter-spacing: text-space(9, 12);
+    }
+
+    @media (max-width : 375px) {
+      font-size: 9px;
     }
   }
 
@@ -41,8 +45,12 @@
     letter-spacing: text-space(32, 8);
 
     @include mediaTabPortrait{
-      font-size: 17px ;
+      font-size: 18px ;
       letter-spacing: text-space(17,10);
+    }
+
+    @media (max-width : 375px) {
+      font-size: 17px;
     }
   }
 

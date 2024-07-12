@@ -8,13 +8,27 @@
     border-radius: 50%;
     position: relative;
 
+    @include mediaTabPortrait {
+        width: 85px;
+        height: 85px;
+    }
+
+    ;
+
     @media (max-width: 375px) {
         width: fit-content;
         height: fit-content;
         padding: 18px;
     }
 
+    ;
+
     img {
+
+        @include mediaTabPortrait {
+            scale: 0.8;
+        }
+
         @media (max-width: 375px) {
             width: 46px;
             height: 46px;

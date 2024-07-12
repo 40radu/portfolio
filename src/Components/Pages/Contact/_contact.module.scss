@@ -5,12 +5,16 @@
     min-height: 100vh;
     padding-top: 100px;
     @include flex (start, center, column);
-    row-gap: 60px;
+    row-gap: 65px;
     position: relative;
+
+    @include mediaTabPortrait {
+        row-gap: 20px;
+        padding-bottom: 20px;
+    }
 
     @media (max-width : 375px) {
         padding-top: 105px;
-        padding-bottom: 20px;
         row-gap: 15px;
     }
 
@@ -18,8 +22,12 @@
         @include flex(center, center, row);
         column-gap: 180px;
 
-        @media (max-width : 375px) {
+        @include mediaTabPortrait {
             flex-direction: column;
+            row-gap: 50px;
+        }
+
+        @media (max-width : 375px) {
             width: 100%;
             row-gap: 40px;
         }
@@ -43,7 +51,7 @@
                 font-weight: 700;
                 letter-spacing: text-space(10, 18);
                 position: absolute;
-                bottom: 0;
+                bottom: -5px;
                 left: 105px;
 
                 @media (max-width : 375px) {
@@ -60,7 +68,12 @@
             column-gap: 18px;
             display: none;
 
-            @media (max-width:375px){
+            @include mediaTabPortrait {
+                display: flex;
+
+            }
+
+            @media (max-width:375px) {
                 display: flex;
             }
 
@@ -77,6 +90,7 @@
                 height: 1px;
                 background-color: $black-25;
             }
+
             img {
                 width: 20px;
                 height: 20px;

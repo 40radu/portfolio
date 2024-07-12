@@ -8,9 +8,12 @@
     row-gap: 60px;
     overflow: hidden;
     position: relative;
+
+    @include mediaTabPortrait {
+        height: fit-content;
+    }
     @media (max-width : 375px) {
         padding: 105px 0 60px 0;
-        height: fit-content;
     }
 
     .skills_containers {
@@ -31,6 +34,10 @@
             column-gap: 145px;
             width: 100%;
 
+            @include mediaTabPortrait {
+                column-gap: 70px;
+            }
+
             @media (max-width : 375px) {
                 flex-wrap: wrap;
                 column-gap: 50px;
@@ -40,6 +47,11 @@
 
         .center {
             column-gap: 235px;
+
+            @include mediaTabPortrait {
+                column-gap: 70px;
+            }
+
             @media (max-width : 375px) {
                 flex-wrap: wrap;
                 column-gap: 50px;

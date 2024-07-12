@@ -19,14 +19,14 @@ function Logo() {
       xPercent:0,
       duration:0.75,
       display: "flex",
-      delay:1
+      delay:0.75
     })
 
     gsap.to(logoBottom.current, {
       xPercent:0,
       duration:0.75,
       display: "flex",
-      delay:1
+      delay:0.75
 
     })
 

@@ -57,9 +57,4 @@
     z-index: -20;
     background-color: white;
     border-left: 1px dashed $black-35;
-
-
-    @include mediaTabPortrait  {
-        row-gap: 20px;
-    }
 }

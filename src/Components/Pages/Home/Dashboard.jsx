@@ -27,11 +27,11 @@ function Dashboard() {
                 // markers: true,
                 trigger: homeSection.current,
                 end:"bottom 30%",
-                start: "top top",
+                start: "50% top",
                 scrub:1,
 
             },
-            opacity: 0,
+            opacity: 0.25,
             duration:10           
         })
 

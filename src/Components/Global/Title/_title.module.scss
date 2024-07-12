@@ -9,13 +9,20 @@
         width: fit-content;
         height: 139px;
         font-size: 128px;
+        // font-size: valueVw(128);
         font-weight: 800;
         letter-spacing: text-space(128, 9);
         color: $white;
         -webkit-text-stroke: 1.5px $black-35;
         text-transform: uppercase;
-        text-shadow: 3px 3px 1px $black-35;
+        text-shadow: 5px 4px 1.5px $black-35;
         position: relative;
+
+        @include mediaTabPortrait {
+            height: 112px;
+            font-size: 100px;
+            letter-spacing: text-space(100, 9);
+        }
 
         @media (max-width : 375px) {
             height: 70px;
@@ -32,6 +39,11 @@
         @include flex (space-between, center, row);
         column-gap: 40px;
 
+        @include mediaTabPortrait {
+            column-gap: 9px;
+            padding: 0 20px 0 10px;
+        }
+
         @media (max-width : 375px) {
             padding: 0;
             column-gap: 10px;
@@ -46,6 +58,10 @@
             background-color: $gray-45;
             border-bottom: 0.5px $blue-50;
             border-style: dotted;
+
+            @include mediaTabPortrait {
+                margin-top: 2px;
+            }
 
             @media (max-width : 375px) {
                 height: 4px;
@@ -67,6 +83,11 @@
             @include flex (center, center, row);
             column-gap: 17px;
             text-transform: capitalize;
+
+            @include mediaTabPortrait {
+                letter-spacing: text-space(16, 6);
+                column-gap: 10px;
+            }
 
             @media (max-width : 375px) {
                 height: fit-content;
@@ -98,6 +119,10 @@
         text-transform: uppercase;
         margin-top: 28px;
         padding-right: 15px;
+
+        @include mediaTabPortrait {
+            margin-top: 16px;
+        }
 
         @media (max-width : 375px) {
             font-size: 9px;

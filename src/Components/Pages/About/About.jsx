@@ -52,7 +52,7 @@ function About() {
                 // markers: true, 
                 scrub: 1
             },
-            opacity: 0,
+            opacity: 0.25,
             duration: 5,
             delay: 1.5,
         })

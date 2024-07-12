@@ -41,27 +41,25 @@ function Skills() {
                     end: 'top, top',
                     // scrub: 1
                 },
-                rotate: '360deg',
-                left: "250px",
-                duration: 0.65,
-                stagger: 0.25,
+                scale : 0,
+                duration: 0.55,
+                stagger: 0.10,
                 opacity: 0,
             })
         }
 
         initAnimation(logoSectionFirst, '72%')
         initAnimation(logoSectionCenter, '72%')
-        initAnimation(logoSectionBottom, '72%')
+        initAnimation(logoSectionBottom, '74%')
 
         gsap.to(skillsSection.current, {
             scrollTrigger: {
-                // markers: true, 
+                markers: true, 
                 trigger: skillsSection.current,
-                start: '60% top',
+                start: '85% top',
                 scrub: 1
             },
-            opacity: 0,
-            duration: 1
+            opacity: 0.25,
         })
 
     }, { scope: skillsSection })
