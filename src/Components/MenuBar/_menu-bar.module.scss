@@ -13,14 +13,16 @@
     // border: 1px solid white;
     // transition: 2s;
     backdrop-filter: blur(2px);
-    // opacity: 100%;
-
 
     @include mediaTabPortrait {
         padding: 10px 10px 14px 10px;
     }
 
     img {
+
+        @include mediaDesktop {
+            width: 42px;
+        }
         @include mediaTabPortrait {
             width: 34px;
             height: 32px;

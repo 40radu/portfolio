@@ -10,7 +10,7 @@ function NavLink({ text, href , onClick}) {
     const rectRef = useRef(null)
 
     function mouseEnter() {
-        gsap.to(linkRef.current, { backgroundColor: 'rgba(217, 217, 217, 0.20)', columnGap: "40px" , duration: 0.25, stagger: 0.1})
+        gsap.to(linkRef.current, { backgroundColor: 'rgba(217, 217, 217, 0.20)', columnGap: "30px" , duration: 0.25, stagger: 0.1})
         gsap.to(rectRef.current, {opacity:1, rotate : '360deg', duration: 0.35})
     }
 

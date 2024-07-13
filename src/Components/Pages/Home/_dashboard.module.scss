@@ -4,11 +4,16 @@
     width: 100%;
     min-height: 100vh;
     @include flex (center, center, row);
-    padding-bottom: 130px;
+    padding-bottom: 100px;
     column-gap: 100px;
+    position: relative;
 
     @media (min-width : 1441px) {
         column-gap: 150px;
+    }
+
+    @include mediaDesktop {
+        overflow-x: hidden;
     }
 
     @include mediaTabPortrait {
@@ -16,17 +21,15 @@
         row-gap: 30px;
         padding: 0 36px;
         padding-top: 84px;
-
     }
 
     @media (max-width : 375px) {
         height: fit-content;
         row-gap: 10px;
         padding: 84px 0 60px 0;
-
     }
 
-    img {
+    .img {
         margin-bottom: 60px;
 
         @media (max-width : 375px) {
@@ -45,6 +48,7 @@
         @include mediaTabPortrait {
             width: 100%;
             @include flex (center, center, column);
+            padding: 0 25px;
         }
 
         @media (max-width : 375px) {
@@ -67,8 +71,13 @@
                 width: 682px;
             }
 
-            @include mediaTabPortrait {
+            @include mediaDesktop {
                 font-size: 58px;
+                letter-spacing: text-space(58, 8);
+            }
+
+            @include mediaTabPortrait {
+                font-size: 50px;
                 text-align: center;
                 letter-spacing: text-space(58, 8);
             }
@@ -87,7 +96,7 @@
             font-size: 14.3px;
             font-weight: 700;
             color: $gray-secondary;
-            letter-spacing: text-space(14.3, 3);
+            letter-spacing: 1px;
 
             @media (max-width : 375px) {
                 font-size: 10px;
@@ -97,6 +106,17 @@
 
             span {
                 @include text-linear-primary;
+            }
+
+            @include mediaTabPortrait {
+                font-size: 14px;
+                letter-spacing: 0.5px;
+                width: 510px;
+            }
+
+            @media (max-width : 375px) {
+                width: 100%;
+                letter-spacing: 0.3px;
             }
         }
 

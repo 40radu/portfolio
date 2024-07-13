@@ -6,7 +6,6 @@
     width: 100%;
 
     p {
-        // width: fit-content;
         height: 145px;
         color: white;
         -webkit-text-stroke: 1.5px $black-35;
@@ -16,17 +15,26 @@
         font-weight: 800;
         letter-spacing: text-space(128, 12);
 
-        @include mediaTabPortrait {
-            font-size: 105px;
+        @include mediaDesktop {
+            font-size: 120px;
+            height: 130px;
             letter-spacing: text-space(110, 8);
-            height: 124px;
+        }
 
+        @include mediaTabPortrait {
+            font-size: 95px;
+            letter-spacing: text-space(110, 8);
+            height: 114px;
         }
 
         @media (max-width : 375px) {
             font-size: 64px;
             letter-spacing: text-space(64, 4);
             height: 75px;
+        }
+
+        @media (max-width : 320px) {
+            font-size: 55px;
         }
     }
 

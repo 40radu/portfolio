@@ -18,8 +18,9 @@ import whatsAppIcon from '../../../Icons/SocialMedia/whatsapp.svg'
 import Link from 'next/link'
 
 function Contact() {
-
+    const refContactSection = useRef(null)
     const imageCont = useRef(null)
+
     const [buttonDisable, setButtonDisable] = useState(true)
     const [enableResponse, setEnableResponse] = useState(false)
     const [isSucces, setIsSucces] = useState(true)
@@ -107,16 +108,28 @@ function Contact() {
                 start: 'top 50%',
                 toggleActions: 'restart none none reverse',
             },
-            duration: 2.25,
-            rotateZ: 65,
+            duration: 1,
+            rotateZ: 35,
             opacity: 0,
             ease: 'elastic'
 
         })
+
+        gsap.from(refContactSection.current, {
+            scrollTrigger: {
+                trigger: refContactSection.current,
+                start: 'top bottom',
+                endTrigger: refContactSection.current,
+                end: '50% 50%',
+                // markers: true, 
+                scrub: 1
+            },
+            backgroundColor:'rgba(4, 4, 4, 0.06)'
+        })
     }, { scope: imageCont })
 
     return (
-        <section className={styles.contact_section} id='contact'>
+        <section className={styles.contact_section} id='contact' ref={refContactSection}>
             <Title
                 title={'contact'}
                 description={'[[ HERE, YOU CAN CONTACT ME ]]'}

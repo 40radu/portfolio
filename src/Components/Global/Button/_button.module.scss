@@ -14,6 +14,15 @@
     width: fit-content;
     height: fit-content;
 
+    @include mediaDesktop {
+        padding: 8px 40px 3px;
+    }
+
+    @include mediaTabPortrait {
+      font-size: 17px;
+      padding: 8px 40px 3px;
+    }
+
     @media (max-width : 375px) {
         font-size: 12px;
         letter-spacing: text-space(12, 4);
@@ -23,6 +32,15 @@
     &:hover {
         letter-spacing: text-space(18, 8);
         padding: 9px 45px 4px;
+
+        @include mediaDesktop {
+            padding: 8px 45px 3px;
+        }
+    
+        @include mediaTabPortrait {
+          font-size: 17px;
+          padding: 8px 45px 3px;
+        }
 
         @media (max-width : 375px) {
             letter-spacing: text-space(12, 8);

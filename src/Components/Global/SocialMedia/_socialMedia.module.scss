@@ -9,7 +9,11 @@
 
     position: fixed;
     left: 80px;
-    top: 44%;
+    top: 40%;
+
+    @include mediaDesktop {
+        display: none;
+    }
 
     @include mediaTabPortrait {
         display: none;

@@ -90,8 +90,8 @@ function MenuBar() {
         <NavLink href={'#home'} text={'home'} onClick={handleClickMenu} />
         <NavLink href={'#about'} text={'about'} onClick={handleClickMenu} />
         <NavLink href={'#skills'} text={'skills'} onClick={handleClickMenu} />
+        <NavLink href={'#contact'} text={'project'} onClick={handleClickMenu} />
         <NavLink href={'#contact'} text={'contact'} onClick={handleClickMenu} />
-        {/* <NavLink href={'#contact'} text={'contact'} onClick={handleClickMenu} /> */}
 
       </nav>
 

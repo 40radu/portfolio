@@ -57,6 +57,17 @@ function About() {
             delay: 1.5,
         })
 
+        gsap.from(about_section.current, {
+            scrollTrigger: {
+                trigger: about_section.current,
+                start: 'top bottom',
+                end: '50% 50%',
+                // markers: true, 
+                scrub: 1
+            },
+            backgroundColor:'rgba(4, 4, 4, 0.06)'
+        })
+
     }, { scope: about_section })
 
 

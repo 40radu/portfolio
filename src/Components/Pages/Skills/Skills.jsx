@@ -48,9 +48,9 @@ function Skills() {
             })
         }
 
-        initAnimation(logoSectionFirst, '72%')
-        initAnimation(logoSectionCenter, '72%')
-        initAnimation(logoSectionBottom, '75%')
+        initAnimation(logoSectionFirst, '82%')
+        initAnimation(logoSectionCenter, '82%')
+        initAnimation(logoSectionBottom, '82%')
 
         gsap.to(skillsSection.current, {
             scrollTrigger: {
@@ -60,6 +60,17 @@ function Skills() {
                 scrub: 1
             },
             opacity: 0.25,
+        })
+
+        gsap.from(skillsSection.current, {
+            scrollTrigger: {
+                trigger: skillsSection.current,
+                start: 'top bottom',
+                end: '50% 50%',
+                // markers: true, 
+                scrub: 1
+            },
+            backgroundColor:'rgba(4, 4, 4, 0.06)'
         })
 
     }, { scope: skillsSection })

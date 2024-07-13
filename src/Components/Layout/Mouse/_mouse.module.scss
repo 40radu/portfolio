@@ -11,11 +11,12 @@
     border-radius: 18px;
     text-decoration: none;
 
-    position: fixed;
+    position: absolute;
     left: 50%;
     bottom: 52px;
     backdrop-filter: blur(1px);
     z-index: 9;
+    
 
     @include mediaTabPortrait {
         display: none;

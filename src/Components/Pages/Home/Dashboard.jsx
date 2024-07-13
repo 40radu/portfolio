@@ -10,6 +10,7 @@ import { useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Link from 'next/link'
+import Mouse from '@/Components/Layout/Mouse/Mouse'
 
 
 function Dashboard() {
@@ -53,13 +54,13 @@ function Dashboard() {
             <Animation />
 
             {/* <div className={styles.section_home__left} ref={leftContainer}> */}
-                <Image src={image} alt='' ref={leftContainer}/>
+                <Image src={image} alt='' ref={leftContainer} className={styles.img}/>
             {/* </div> */}
             <div className={styles.section_home__right} ref={rightContainer}>
                 <h1>Front-End React Developer</h1>
                 <p>Hi, I am <span className={styles.name}>Radonirina</span>.
                     I invite you to explore the world of web and mobile development
-                    through my portfolio.</p>
+                    through my portfolio !</p>
                 <div className={styles.container_button}>
                     <Button className={'btn-secondary'}
                         value={"Download CV"}
@@ -70,6 +71,8 @@ function Dashboard() {
 
                 </div>
             </div>
+
+            <Mouse/>
         </section>
     )
 }

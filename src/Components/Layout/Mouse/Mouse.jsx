@@ -12,30 +12,12 @@ function Mouse() {
   const mouse = useRef()
 
   useGSAP(() => {
-    // console.log('mande use Gsap')
     gsap.to(mouse.current, {
       yoyo: true,
       bottom: 80,
-      delay: 0.25,
-      duration: 1.5,
-      // ease:'back',
+      delay: 0.2,
+      duration: 1.35,
       repeat: -1
-    })
-
-    document.addEventListener('scroll', () => {
-      gsap.to(mouse.current, {
-        opacity: 0,
-        delay: 0.1,
-        duration: 0.1
-      })
-    })
-
-    document.addEventListener('scrollend', () => {
-      gsap.to(mouse.current, {
-        opacity: 1,
-        delay: 1,
-        duration: 0.5
-      })
     })
   }, {scope : mouse})
 

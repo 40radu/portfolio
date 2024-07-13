@@ -18,11 +18,26 @@ $gray-100 : rgba(217, 217, 217);
 $gray-secondary : rgba(138, 138, 138);
 
 
-$breakpoints : ("tabPortrait" : 768px,
+$breakpoints : (
+    "tabPortrait" : 768px,
+    "desktop":1280px,
+    "wideDesktop" : 1441px
 );
 
 @mixin mediaTabPortrait () {
     @media (max-width:map-get($breakpoints, "tabPortrait")) {
+        @content;
+    }
+}
+
+@mixin mediaWideDesktop () {
+    @media (min-width:map-get($breakpoints, "wideDesktop")) {
+        @content;
+    }
+}
+
+@mixin mediaDesktop () {
+    @media (max-width:map-get($breakpoints, "desktop")) {
         @content;
     }
 }

@@ -11,6 +11,7 @@
 
     @include mediaTabPortrait {
         height: fit-content;
+        padding-bottom: 50px;
     }
     @media (max-width : 375px) {
         padding: 105px 0 60px 0;
@@ -34,6 +35,10 @@
             column-gap: 145px;
             width: 100%;
 
+            @include mediaWideDesktop {
+                column-gap: 195px;
+            }
+
             @include mediaTabPortrait {
                 column-gap: 70px;
             }
@@ -47,6 +52,14 @@
 
         .center {
             column-gap: 235px;
+
+            @include mediaWideDesktop {
+                column-gap: 285px;
+            }
+
+            @include mediaDesktop {
+                column-gap: 200px;
+            }
 
             @include mediaTabPortrait {
                 column-gap: 70px;
