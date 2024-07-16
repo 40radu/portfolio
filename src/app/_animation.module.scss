@@ -13,7 +13,7 @@
             font-size: 42px ;
         }
 
-        @media (max-width : 375px) {
+        @media (max-width : 425px) {
             font-size: 28px;
             -webkit-text-stroke: 1px rgba(0, 0, 0, 0.75);
         }
@@ -34,7 +34,7 @@
         @include mediaTabPortrait {
             font-size: 42px ;
         }
-        @media (max-width : 375px) {
+        @media (max-width : 425px) {
             font-size: 28px;
         }
 

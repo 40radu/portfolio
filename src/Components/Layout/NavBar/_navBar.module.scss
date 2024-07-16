@@ -17,12 +17,13 @@
     }
 
     @include mediaTabPortrait {
-        padding: 8px 30px 8px 36px;
-        background-color: $white;
-        box-shadow: 0 1.5px 1px 1px $black-25;
+        padding: 8px 30px 4px 36px;
+        background-color: transparent;
+        box-shadow: 0 0 3px 1px $black-25;
+        backdrop-filter: blur(1.5px)
     };
-    @media (max-width : 375px) {
-        padding: 8px 10px 8px 16px;
+    @media (max-width : 425px) {
+        padding: 0 10px 0 16px;
     }
 }
 

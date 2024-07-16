@@ -32,13 +32,13 @@ function MenuBar() {
       });
       gsap.from(navLink, {
         ease: 'back',
-        marginRight: '16%',
+        marginRight: '15%',
         duration: 0.35,
         delay: 0.95,
         letterSpacing: '0'
       })
     } else {
-      body.style.overflow = 'auto'  
+      body.style.overflow = 'auto'
       gsap.to(navBar, {
         right: '-102%',
         duration: 0.75,
@@ -90,7 +90,7 @@ function MenuBar() {
         <NavLink href={'#home'} text={'home'} onClick={handleClickMenu} />
         <NavLink href={'#about'} text={'about'} onClick={handleClickMenu} />
         <NavLink href={'#skills'} text={'skills'} onClick={handleClickMenu} />
-        <NavLink href={'#contact'} text={'project'} onClick={handleClickMenu} />
+        {/* <NavLink href={'#contact'} text={'project'} onClick={handleClickMenu} /> */}
         <NavLink href={'#contact'} text={'contact'} onClick={handleClickMenu} />
 
       </nav>

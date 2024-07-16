@@ -28,6 +28,4 @@ function Mouse() {
   )
 }
 
-// TypeError: Cannot read properties of null (reading 'style')
-
 export default Mouse

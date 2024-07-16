@@ -27,7 +27,7 @@
             height: 114px;
         }
 
-        @media (max-width : 375px) {
+        @media (max-width : 425px) {
             font-size: 64px;
             letter-spacing: text-space(64, 4);
             height: 75px;
@@ -45,7 +45,7 @@
         margin-top: 35px;
         opacity: 0;
 
-        @media (max-width : 375px) {
+        @media (max-width : 425px) {
             width: 12px;
             height: 12px;
             margin-top: 10px;

@@ -1,5 +1,7 @@
 @import '../../../app/mixins';
-
+.noScroll {
+    overflow: hidden;
+ }
 .contact_section {
     width: 100%;
     min-height: 100vh;
@@ -13,7 +15,7 @@
         padding-bottom: 20px;
     }
 
-    @media (max-width : 375px) {
+    @media (max-width : 425px) {
         padding-top: 105px;
         row-gap: 15px;
     }
@@ -31,7 +33,7 @@
             row-gap: 50px;
         }
 
-        @media (max-width : 375px) {
+        @media (max-width : 425px) {
             width: 100%;
             row-gap: 40px;
         }
@@ -43,7 +45,7 @@
             padding-bottom: 12.5px;
 
             img {
-                @media (max-width : 375px) {
+                @media (max-width : 425px) {
                     width: 234px;
                     height: 215px;
                 }
@@ -58,7 +60,7 @@
                 bottom: -10px;
                 left: 105px;
 
-                @media (max-width : 375px) {
+                @media (max-width : 425px) {
                     font-size: 8px;
                     letter-spacing: text-space(8, 18);
                     left: 35px;
@@ -80,9 +82,10 @@
 
             @include mediaTabPortrait {
                 display: flex;
+                position: static;
             }
 
-            @media (max-width:375px) {
+            @media (max-width:425px) {
                 display: flex;
             }
 
@@ -110,7 +113,7 @@
             @include flex (center, center, column);
             row-gap: 10px;
 
-            @media (max-width : 375px) {
+            @media (max-width : 425px) {
                 padding: 0 20px;
                 width: 100%;
             }

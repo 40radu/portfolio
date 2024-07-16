@@ -61,14 +61,12 @@ function Contact() {
 
         setButtonContent('loading ...')
         setIsSendNotLoading(false)
-
+        const body = document.querySelector('body')
         e.preventDefault()
 
         emailjs.send('service_x4yca0k', 'template_5zjetkr', formData, 'w7dKq_C37hbeLrg4u').then(function (res) {
 
-            const body = document.querySelector('body')
             body.style.overflow = 'hidden'
-
             setIsSucces(true)
             setButtonContent('send')
             setIsSendNotLoading(true)
@@ -80,7 +78,6 @@ function Contact() {
             e.target[2].value =''
 
         }).catch((error) => {
-            const body = document.querySelector('body')
             body.style.overflow = 'hidden'
             setIsSucces(false)
             setButtonContent('send')

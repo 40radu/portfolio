@@ -8,7 +8,8 @@ import styles from './_animation.module.scss'
 function Animation() {
 
   useGSAP(() => {
-
+    const body = document.querySelector('body')
+    body.style.overflow = 'hidden'
     const bannerLeft = document.querySelector('#banner__left')
     const bannerRight = document.querySelector('#banner__right')
 
@@ -40,10 +41,13 @@ function Animation() {
 
     })
 
+    body.style.overflow = 'auto'
+
+
   })
 
   return (
-    <section className='animation'>
+    <section className='overflow-hidden'>
 
       <div id='banner__left' className={`${styles.bannerLeft} min-h-screen backdrop-blur-sm bg-white fixed z-50 top-0 left-0 w-1/2 flex justify-end items-center`} style={{ fontSize: 55, fontWeight: 800, fontFamily: 'khula', paddingRight: 7.5}}>
         <p style={{ color: 'white' }}>Welcome To</p>

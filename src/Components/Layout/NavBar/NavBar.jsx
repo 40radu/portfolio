@@ -10,7 +10,7 @@ function NavBar() {
 
 
   return (
-    <nav className={styles.navBar_container}>
+    <nav className={styles.navBar_container} id='navBarSection'>
         <Logo/>
         <MenuBar/>
     </nav>

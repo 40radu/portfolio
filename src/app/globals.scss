@@ -4,7 +4,15 @@
 
 @import './mixins';
 
-*{
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.noScroll {
+    overflow: hidden;
+ }
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;

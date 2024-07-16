@@ -5,37 +5,17 @@ import styles from './_Logo.module.scss'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import Link from 'next/link'
+import logoMobile from '../../Icons/Logo/logo-mobile.svg'
+
+import Image from 'next/image'
 
 function Logo() {
 
-  const logoTop = useRef()
-  const logoBottom = useRef()
-
-  useGSAP(()=>{
-    gsap.set(logoTop.current , {xPercent:-100});
-    gsap.set(logoBottom.current , {xPercent:-100})
-
-    gsap.to(logoTop.current, {
-      xPercent:0,
-      duration:0.75,
-      display: "flex",
-      delay:0.75
-    })
-
-    gsap.to(logoBottom.current, {
-      xPercent:0,
-      duration:0.75,
-      display: "flex",
-      delay:0.75
-
-    })
-
-  })
-
   return (
     <Link href={'#home'} className={styles.logo} >
-        <p className={styles.logo__top} ref={logoTop} >Portfolio</p>
-        <p className={styles.logo__bottom} ref={logoBottom} >Radonirina</p>
+        <p className={styles.logo__top}>Portfolio</p>
+        <p className={styles.logo__bottom} >Radonirina</p>
+        <Image src={logoMobile} alt='logo'/>
     </Link>
   )
 }

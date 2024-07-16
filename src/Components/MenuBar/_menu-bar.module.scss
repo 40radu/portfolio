@@ -23,6 +23,7 @@
         @include mediaDesktop {
             width: 42px;
         }
+
         @include mediaTabPortrait {
             width: 34px;
             height: 32px;
@@ -42,7 +43,7 @@
         text-shadow: 1px 1px 1px $black-25;
         scale: 0.8;
 
-        @include mediaTabPortrait  {
+        @include mediaTabPortrait {
             display: none;
         }
     }
