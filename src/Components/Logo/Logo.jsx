@@ -7,6 +7,7 @@ import gsap from 'gsap'
 import Link from 'next/link'
 import logoMobile from '../../Icons/Logo/logo-mobile.svg'
 
+
 import Image from 'next/image'
 
 function Logo() {

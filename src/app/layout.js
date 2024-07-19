@@ -17,7 +17,7 @@ export const metadata = {
 };
 
 <Head>
-<meta name="google" content="notranslate" />
+  <meta name="google" content="notranslate" />
 </Head>
 
 export default function RootLayout({ children }) {
@@ -26,7 +26,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <NavBar />
+        <header>
+          <NavBar />
+        </header>
         <SocialMedia />
         {children}
         {/* <Mouse/> */}
