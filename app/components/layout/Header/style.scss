@@ -1,0 +1,47 @@
+.header {
+  &__bg {
+    @apply flex fixed w-full h-fit z-50;
+    padding-block: 10px;
+  }
+
+  &__content {
+    @apply flex justify-between items-center;
+    padding-block: 0;
+    border-radius: 50px;
+
+    &-nav {
+      @apply flex;
+      gap: 50px;
+
+      a {
+        @apply flex text-white items-center;
+        gap: 10px;
+        transition: 0.25s ease-in-out;
+        border-bottom: 3px solid transparent;
+        &::before {
+          content: "";
+          width: 4px;
+          aspect-ratio: 1/1;
+          @apply bg-white rounded-full;
+          scale: 0.5;
+          transition: 0.25s ease-in-out;
+        }
+
+        &:hover {
+          &::before {
+            scale: 1;
+            @apply bg-yellow;
+          }
+        }
+      }
+
+      .active {
+        @apply border-yellow text-yellow;
+        &::before {
+          scale: 1;
+          @apply bg-yellow;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.hero {
+  @apply min-h-screen flex flex-col justify-center items-center text-white;
+  font-family: "Montserrat";
+  gap: 20px;
+
+  .yellow {
+    @apply text-yellow;
+  }
+
+  &_name {
+    @apply text-xs;
+  }
+
+  &_welcome {
+    @apply text-4xl font-bold;
+    
+    .yellow {
+      @apply uppercase;
+    }
+  }
+
+  h1 {
+    @apply text-2xl;
+    span {
+      @apply uppercase font-medium;
+    }
+  }
+
+  &_description {
+    @apply text-sm text-center text-base font-medium;
+    max-width: 500px;
+  }
+}

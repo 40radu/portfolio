@@ -1,0 +1,32 @@
+.btn {
+  @apply flex justify-center items-center;
+  font-family: "Mogra";
+  padding: 10px 20px;
+  border-radius: 50px;
+  gap: 10px;
+  &:hover {
+    .circle {
+      scale: 1;
+      @apply bg-yellow;
+    }
+    .text span {
+      transform: translateY(-100%);
+      transition: 0.3s ease-in-out;
+    }
+  }
+  .text {
+    @apply flex flex-col overflow-hidden;
+    height: 24px;
+    transition: 0.3s ease-in-out;
+  }
+  .circle {
+    width: 4px;
+    scale : 0.5;
+    aspect-ratio: 1/1;
+    @apply bg-white rounded-full;
+    transition: 0.25s ease-in-out;
+  }
+  &--primary {
+    @apply bg-black text-white;
+  }
+}
