@@ -1,0 +1,19 @@
+.heading {
+    @apply flex flex-col w-full items-center;
+    gap: 20px;
+    h2 {
+      padding: 10px 30px;
+      @apply flex text-xl bg-white text-black uppercase items-center;
+      border-radius: 50px;
+      gap: 10px;
+      span {
+        @apply flex rounded-full bg-yellow;
+        width: 8px;
+        aspect-ratio: 1/1;
+      }
+    }
+    p {
+      @apply text-white font-medium;
+      font-family: "Montserrat";
+    }
+}
