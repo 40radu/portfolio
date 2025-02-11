@@ -1,21 +1,26 @@
 interface LinksProps {
-  label : string;
-  href : string;
+  label: string;
+  href: string;
 }
 
-const linksData : LinksProps[] = [
+const linksData: LinksProps[] = [
   {
-    label : "Accueil",
-    href :"/"
+    label: "Accueil",
+    href: "/"
   },
   {
-    label : "Compétences",
-    href :"/skill"
-  },{
-    label : "Projet",
-    href :"/project"
+    label: "Travail",
+    href: "/work"
   },
-  
+  {
+    label: "Compétences",
+    href: "/skill"
+  },
+  {
+    label: "Projet",
+    href: "/project"
+  },
+
 ]
 
-export {linksData}
+export { linksData }

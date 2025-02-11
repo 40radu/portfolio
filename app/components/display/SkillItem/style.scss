@@ -1,0 +1,7 @@
+.skill-item {
+  @apply flex flex-col items-center;
+
+  p {
+    @apply text-white;
+  }
+}

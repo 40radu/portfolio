@@ -12,7 +12,7 @@
   }
 
   &_welcome {
-    @apply text-4xl font-bold;
+    @apply text-4xl font-extrabold;
     
     .yellow {
       @apply uppercase;
@@ -22,12 +22,12 @@
   h1 {
     @apply text-2xl;
     span {
-      @apply uppercase font-medium;
+      @apply uppercase font-bold;
     }
   }
 
   &_description {
-    @apply text-sm text-center text-base font-medium;
+    @apply text-center text-base font-medium;
     max-width: 500px;
   }
 }
