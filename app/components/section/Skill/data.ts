@@ -9,6 +9,22 @@ const dataSkillFirst: SkillItemProps[] = [
     icon: 'tailwind',
     label: "Tailwind"
   },
+  {
+    icon: 'figma',
+    label: "Figma"
+  },
+  {
+    icon: 'react',
+    label: "Redux"
+  },
+  {
+    icon: 'figma',
+    label: "Figma"
+  },
+  {
+    icon: 'react',
+    label: "Redux"
+  }
 
 ]
 const dataSkillSecond: SkillItemProps[] = [
@@ -23,20 +39,7 @@ const dataSkillSecond: SkillItemProps[] = [
   {
     icon: 'git',
     label: "GitHub"
-  }
-]
-const dataSkillFird: SkillItemProps[] = [
-  {
-    icon: 'figma',
-    label: "Figma"
   },
-  {
-    icon: 'react',
-    label: "Redux"
-  }
-]
-
-const dataSkillFour: SkillItemProps[] = [
   {
     icon: 'react',
     label: "ReactJs"
@@ -51,4 +54,4 @@ const dataSkillFour: SkillItemProps[] = [
   }
 ]
 
-export { dataSkillFird, dataSkillFirst, dataSkillSecond, dataSkillFour }
+export { dataSkillFirst, dataSkillSecond }

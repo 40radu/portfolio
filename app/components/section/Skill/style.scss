@@ -1,23 +1,20 @@
 .skill {
   @apply flex flex-col h-screen;
   gap: 75px;
-  &_content {
-    @apply grid grid-cols-2 w-full items-center;
-    gap: 30px;
-    li {
-      @apply w-full grid ;
-      // &:nth-child(1){
-        @apply grid-cols-2;
-        width: 75%;
-      // }
-      &:nth-child(2){
-        @apply grid-cols-3;
-        width: 100%;
-      }
-      &:nth-child(4){
-        @apply grid-cols-3;
-        width: 100%;
 
+  &_content {
+    @apply grid grid-cols-2 w-full items-start;
+    gap: 30px;
+
+    li {
+      @apply w-full grid;
+      gap: 30px;
+      @apply grid-cols-2;
+      width: 75%;
+
+      &:nth-child(2) {
+        @apply grid-cols-3;
+        width: 100%;
       }
     }
   }

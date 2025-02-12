@@ -1,8 +1,9 @@
 .background {
-  background-image: url("/new.png");
+  background-image: url("/11.png");
   @apply w-full h-screen fixed top-0 left-0 bg-cover -z-10 grid
   grid-cols-10;
   span {
-    border: 1px solid black;
+    border: 1px solid;
+    @apply border-black;
   }
 }

@@ -9,8 +9,8 @@ const linksData: LinksProps[] = [
     href: "/"
   },
   {
-    label: "Travail",
-    href: "/work"
+    label: "Service",
+    href: "/service"
   },
   {
     label: "Compétences",
