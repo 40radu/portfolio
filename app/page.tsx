@@ -1,7 +1,7 @@
 import Hero from "@/section/Hero";
 import Background from "./components/common/Background";
-import Skill from "./components/section/Skill";
-import Heading from "./components/common/Heading";
+import Skill from "@/section/Skill";
+import Service from "@/section/Service";
 
 export default function Home() {
   return (
@@ -9,8 +9,7 @@ export default function Home() {
       <Background />
       <Hero />
       <Skill/>
-      <Heading description='Vous trouverez ci-après la liste de mes compétence' label='Projet' />
-      
+      <Service/>
     </>
   );
 }

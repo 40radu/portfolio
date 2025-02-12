@@ -1,12 +1,12 @@
 "use client"
 import React from 'react'
-import Heading from '../../common/Heading'
-import Container from '../../common/Container'
-import "./style.scss"
 import { dataSkillFirst, dataSkillSecond } from './data'
-import SkillItem from '../../display/SkillItem'
 import { useGSAP } from '@gsap/react'
 import { changeBg } from '@/app/animation/changeBg'
+import Container from '@/app/components/common/Container'
+import Heading from '@/app/components/common/Heading'
+import SkillItem from '@/app/components/display/SkillItem'
+import "./style.scss"
 
 function Skill() {
   useGSAP(() => {
@@ -14,7 +14,7 @@ function Skill() {
   })
   return (
     <Container className='skill'>
-      <Heading description='Vous trouverez ci-après la liste de mes compétence' label='Compétences' />
+      <Heading description='Découvrez mes compétences pour donner vie à vos idées numériques.' label='Compétences' />
       <ul className='skill_content'>
         <li>
           {

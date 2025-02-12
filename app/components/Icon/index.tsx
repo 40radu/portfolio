@@ -9,6 +9,8 @@ import Figma from './Figma'
 import Vue from './Vue'
 import ReactJs from './ReactJs'
 import Sass from './Sass'
+import Ux from './Ux'
+import Balise from './Balise'
 
 
 const icon = {
@@ -18,9 +20,11 @@ const icon = {
   javascript: <Javascript />,
   git: <Git />,
   figma: <Figma />,
-  vue : <Vue/>,
-  react : <ReactJs/>,
-  sass : <Sass/>
+  vue: <Vue />,
+  react: <ReactJs />,
+  sass: <Sass />,
+  ux: <Ux />,
+  balise: <Balise />
 }
 
 export type IconType = typeof icon

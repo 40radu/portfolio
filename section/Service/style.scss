@@ -1,0 +1,8 @@
+.service {
+  @apply w-full h-screen flex flex-col justify-center;
+  gap: 75px;
+  &_content {
+    @apply w-full h-fit grid grid-cols-2 items-start;
+    gap: 50px;
+  }
+}

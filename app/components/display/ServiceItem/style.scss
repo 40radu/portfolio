@@ -1,0 +1,17 @@
+.service-item {
+  font-family: "Montserrat";
+  @apply flex text-white items-center h-full;
+  gap: 50px;
+  &_text {
+    @apply flex flex-col h-full;
+    gap: 20px;
+    h4 {
+      @apply text-2xl font-semibold;
+    }
+    ul{
+      @apply font-medium flex flex-col;
+      gap: 10px;
+    }
+
+  }
+}
