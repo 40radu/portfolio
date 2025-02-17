@@ -1,23 +1,32 @@
 .header {
-  &__bg {
-    @apply flex fixed w-full h-fit z-50;
-    padding-block: 10px;
-  }
+  @apply flex fixed w-full h-fit z-50;
+  padding-block: 10px;
 
   &__content {
-    @apply flex justify-between items-center;
+    @apply flex justify-between items-center static;
     padding-block: 0;
-    border-radius: 50px;
+
+    .button {
+      @apply hidden;
+      @screen lg {
+        @apply flex;
+      }
+    }
 
     &-nav {
-      @apply flex;
+      @apply hidden;
       gap: 50px;
 
-      a {
+      @screen lg {
+        @apply flex;
+      }
+
+      .link {
         @apply flex text-white items-center;
         gap: 10px;
         transition: 0.25s ease-in-out;
         border-bottom: 3px solid transparent;
+
         &::before {
           content: "";
           width: 4px;
@@ -25,6 +34,15 @@
           @apply bg-white rounded-full;
           scale: 0.5;
           transition: 0.25s ease-in-out;
+        }
+
+        &_active {
+          @apply border-yellow text-yellow;
+
+          &::before {
+            scale: 1;
+            @apply bg-yellow;
+          }
         }
 
         &:hover {
@@ -35,12 +53,99 @@
         }
       }
 
-      .active {
-        @apply border-yellow text-yellow;
+
+    }
+
+    &-nav_mobile {
+      @apply flex flex-col items-center w-full absolute left-0 top-0 text-white -z-10;
+      gap: 20px;
+      padding-block: 150px 80px;
+      backdrop-filter: blur(8px);
+      box-shadow: 1px 2px 20px rgba(#8d8d8d, 0.2);
+      transform: translateY(-100%);
+      transition: 0.3s ease-in-out;
+
+      @screen lg {
+        @apply hidden;
+      }
+
+      button {
+        @apply flex;
+      }
+
+      &.active {
+        transform: translateY(0)
+      }
+
+      .link {
+        @apply flex text-white items-center;
+        gap: 10px;
+        transition: 0.25s ease-in-out;
+        border-bottom: 3px solid transparent;
+
         &::before {
-          scale: 1;
-          @apply bg-yellow;
+          content: "";
+          width: 4px;
+          aspect-ratio: 1/1;
+          @apply bg-white rounded-full;
+          scale: 0.5;
+          transition: 0.25s ease-in-out;
         }
+
+        &_active {
+          @apply border-yellow text-yellow;
+
+          &::before {
+            scale: 1;
+            @apply bg-yellow;
+          }
+        }
+
+        &:hover {
+          &::before {
+            scale: 1;
+            @apply bg-yellow;
+          }
+        }
+      }
+
+    }
+
+    &-menu {
+      @apply flex flex-col relative;
+      gap: 6px;
+      width: 25px;
+      height: 20px;
+      span {
+        transition: 0.3s ease-in-out;
+      }
+      @screen lg {
+        @apply hidden;
+      }
+
+      &.active {
+        span {
+						@apply absolute top-1/2;
+
+						&:nth-child(1) {
+							transform: rotate(45deg);
+						}
+
+						&:nth-child(3) {
+							transform: rotate(-45deg);
+						}
+
+						&:nth-child(2) {
+							opacity: 0;
+							transition: 0s;
+						}
+        }
+      }
+
+      span {
+        width: 25px;
+        height: 2px;
+        @apply bg-white;
       }
     }
   }

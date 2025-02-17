@@ -1,4 +1,7 @@
 .icon {
+  svg {
+    @apply w-full h-full;
+  }
   &_yellow {
     @apply text-yellow;
   }

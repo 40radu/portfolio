@@ -1,7 +1,23 @@
 .skill-item {
   @apply flex flex-col items-center;
 
+  span {
+    scale: 0.5;
+
+    @screen lg {
+      scale: 0.8;
+    }
+
+    @screen 2xl {
+      scale: 1;
+    }
+  }
+
   p {
-    @apply text-white;
+    @apply text-white text-sm;
+
+    @screen md {
+      @apply text-base;
+    }
   }
 }

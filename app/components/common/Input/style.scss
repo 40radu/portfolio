@@ -1,0 +1,12 @@
+.common-input {
+  font-family: "Montserrat";
+  padding: 20px 15px;
+  border: 1px solid;
+  @apply w-full flex border-white;
+  input {
+    @apply w-full h-full bg-transparent text-white outline-none font-medium;
+    &::placeholder {
+      @apply text-white;
+    }
+  }
+}

@@ -1,7 +1,11 @@
 .hero {
-  @apply min-h-screen flex flex-col justify-center items-center text-white;
+  @apply min-h-screen flex flex-col justify-center items-start text-white;
   font-family: "Montserrat";
   gap: 20px;
+
+  @screen md {
+    @apply items-center;
+  }
 
   .yellow {
     @apply text-yellow;
@@ -12,22 +16,43 @@
   }
 
   &_welcome {
-    @apply text-4xl font-extrabold;
-    
+    @apply text-2xl font-extrabold;
+
+    @screen md {
+      @apply text-3xl;
+    }
+
+    @screen lg {
+      @apply text-4xl;
+    }
+
     .yellow {
       @apply uppercase;
     }
   }
 
   h1 {
-    @apply text-2xl;
+    @apply text-lg;
+
+    @screen md {
+      @apply text-xl;
+    }
+
+    @screen lg {
+      @apply text-2xl;
+    }
+
     span {
       @apply uppercase font-bold;
     }
   }
 
   &_description {
-    @apply text-center text-base font-medium;
+    @apply text-base font-medium w-full;
     max-width: 500px;
+
+    @screen lg {
+      @apply text-center
+    }
   }
 }

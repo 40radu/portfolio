@@ -1,17 +1,43 @@
 .service-item {
   font-family: "Montserrat";
-  @apply flex text-white items-center h-full;
-  gap: 50px;
+  @apply flex flex-col text-white h-full;
+  gap: 20px;
+
+  @screen md {
+    @apply flex-row items-center;
+    gap: 30px;
+  }
+
+  .icon {
+    width: 80px;
+
+    @screen xl {
+      width: 96px;
+    }
+    @screen 2xl {
+      width: 120px;
+    }
+  }
+
   &_text {
     @apply flex flex-col h-full;
     gap: 20px;
+
     h4 {
-      @apply text-2xl font-semibold;
-    }
-    ul{
-      @apply font-medium flex flex-col;
-      gap: 10px;
+      @apply text-lg font-semibold;
+
+      @screen xl {
+        @apply text-2xl;
+      }
     }
 
+    ul {
+      @apply font-medium text-sm flex flex-col;
+      gap: 10px;
+
+      @screen xl {
+        @apply text-base;
+      }
+    }
   }
 }

@@ -1,0 +1,21 @@
+.project {
+  @apply min-h-screen flex flex-col;
+  gap: 50px;
+  padding-bottom: 100px;
+
+  @screen xl {
+    gap: 75px;
+    padding-bottom: 0;
+  }
+
+  &_content {
+    @apply flex flex-col;
+    gap: 75px;
+
+    @screen lg {
+      .card-project:nth-child(2) {
+        @apply flex-row-reverse;
+      } 
+    }
+  }
+}

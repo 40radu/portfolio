@@ -1,0 +1,13 @@
+.common-textarea {
+  font-family: "Montserrat";
+  padding: 20px 15px;
+  border: 1px solid;
+  @apply w-full flex border-white;
+  textarea {
+    @apply w-full h-full bg-transparent text-white outline-none font-medium;
+    height: 100px;
+    &::placeholder {
+      @apply text-white;
+    }
+  }
+}

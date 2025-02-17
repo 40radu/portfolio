@@ -23,8 +23,8 @@ export function changeBg(props: ChangeBgProps) {
           gsap.to(".rect", {
             backgroundColor: "black",
             stagger: {
-              each: 0.02,
-              from: 'end',
+              each: 0.01,
+              from: 'edges',
               grid: 'auto',
               ease: 'linear',
             },
@@ -33,7 +33,7 @@ export function changeBg(props: ChangeBgProps) {
               gsap.to(".rect", {
                 backgroundColor: "transparent",
                 stagger: {
-                  each: 0.02,
+                  each: 0.01,
                   from: 'center',
                   grid: 'auto',
                   ease: 'linear',
@@ -46,8 +46,8 @@ export function changeBg(props: ChangeBgProps) {
       },
       backgroundColor: "black",
       stagger: {
-        each: 0.02,
-        from: 'end',
+        each: 0.01,
+        from: 'edges',
         grid: 'auto',
         ease: 'linear',
       },
@@ -56,7 +56,7 @@ export function changeBg(props: ChangeBgProps) {
         gsap.to(".rect", {
           backgroundColor: "transparent",
           stagger: {
-            each: 0.02,
+            each: 0.01,
             from: 'center',
             grid: 'auto',
             ease: 'linear',

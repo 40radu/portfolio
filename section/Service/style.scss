@@ -1,8 +1,26 @@
 .service {
-  @apply w-full h-screen flex flex-col justify-center;
-  gap: 75px;
+  @apply w-full min-h-screen flex flex-col justify-center;
+  padding-bottom: 100px;
+  gap: 40px;
+
+  @screen md {
+    padding-bottom: 0;
+  }
+
+  @screen xl {
+    gap: 75px;
+  }
+
   &_content {
-    @apply w-full h-fit grid grid-cols-2 items-start;
-    gap: 50px;
+    @apply w-full h-fit grid items-start;
+    gap: 40px;
+
+    @screen md {
+      @apply justify-items-center;
+    }
+
+    @screen xl {
+      @apply grid-cols-2;
+    }
   }
 }

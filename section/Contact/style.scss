@@ -1,0 +1,56 @@
+.contact {
+  @apply min-h-screen flex flex-col justify-center;
+  gap: 75px;
+
+  //mobile
+  padding-bottom: 50px;
+  gap: 50px;
+
+  @screen lg {
+    padding-bottom: 0;
+  }
+
+  &_content {
+    @apply w-full grid;
+    gap: 50px;
+
+    @screen lg {
+      @apply grid-cols-2;
+      gap: 0;
+    }
+
+    @screen xl {
+      gap: 100px;
+    }
+
+    &--infos {
+      @apply w-full flex flex-col;
+      gap: 12px;
+
+      li {
+        @apply flex items-center;
+        gap: 35px;
+        //mobile
+        gap: 20px;
+
+        @screen lg {
+          gap: 35px;
+        }
+
+        .icon {
+          //mobile
+          width: 55px;
+
+          @screen lg {
+            width: auto;
+          }
+        }
+
+        p {
+          font-family: "Montserrat";
+          @apply text-white font-medium;
+        }
+      }
+    }
+  }
+}

@@ -11,6 +11,9 @@ import ReactJs from './ReactJs'
 import Sass from './Sass'
 import Ux from './Ux'
 import Balise from './Balise'
+import Email from './Email'
+import Location from './Location'
+import Whatsapp from './Whatsapp'
 
 
 const icon = {
@@ -24,7 +27,10 @@ const icon = {
   react: <ReactJs />,
   sass: <Sass />,
   ux: <Ux />,
-  balise: <Balise />
+  balise: <Balise />,
+  email: <Email />,
+  location: <Location />,
+  whatsapp: <Whatsapp />
 }
 
 export type IconType = typeof icon

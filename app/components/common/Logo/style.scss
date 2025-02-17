@@ -1,0 +1,8 @@
+.logo {
+  width: 55px;
+  height: 33px;
+  @screen lg {
+    width: 75px;
+    height: 53px;
+  }
+}

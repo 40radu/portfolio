@@ -9,8 +9,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        yellow : "#FFE019"
+        yellow: "#FFE019"
       },
+      screens: {
+        '2xl': '1440px'
+      }
     },
   },
   plugins: [],

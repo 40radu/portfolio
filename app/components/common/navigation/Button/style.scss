@@ -1,5 +1,5 @@
 .btn {
-  @apply flex justify-center items-center;
+  @apply flex justify-center items-center w-fit;
   font-family: "Mogra";
   padding: 10px 20px;
   border-radius: 50px;
@@ -15,9 +15,14 @@
     }
   }
   .text {
-    @apply flex flex-col overflow-hidden;
-    height: 24px;
+    @apply flex flex-col overflow-hidden text-sm;
     transition: 0.3s ease-in-out;
+    //mobile
+    height: 20px;
+    @screen lg {
+      @apply text-base;
+      height: 24px;
+    }
   }
   .circle {
     width: 4px;
@@ -27,6 +32,7 @@
     transition: 0.25s ease-in-out;
   }
   &--primary {
-    @apply bg-black text-white;
+    border: 2px solid;
+    @apply text-white border-white;
   }
 }
