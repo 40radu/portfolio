@@ -1,10 +1,10 @@
 .service {
   @apply w-full min-h-screen flex flex-col justify-center;
-  padding-bottom: 100px;
+  padding-block: 100px;
   gap: 40px;
 
   @screen md {
-    padding-bottom: 0;
+    padding-block: 0;
   }
 
   @screen xl {

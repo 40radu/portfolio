@@ -10,10 +10,10 @@ import { changeBg } from '@/app/animation/changeBg'
 
 function Project() {
   useGSAP(() => {
-      changeBg({ newBackground: "projet.png", startData: "top 70%", triggerData: `#project`, prevBackground: "cesar.png" })
+      changeBg({ newBackground: "projet.png", startData: "top 70%", triggerData: `.project`, prevBackground: "cesar.png" })
     })
   return (
-    <Container className='project' id='project'>
+    <Container className='project' id='h-section'>
       <Heading label='Projet' description='Quelque projet déjà réalisé' />
       <div className="project_content">
         {dataProjectList.map((data, id) => (

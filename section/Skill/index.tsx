@@ -15,10 +15,10 @@ import { Autoplay, Pagination } from 'swiper/modules'
 
 function Skill() {
   useGSAP(() => {
-    changeBg({ newBackground: "Hero-girls.png", startData: "top 70%", triggerData: "#skill", prevBackground: "projet.png" })
+    changeBg({ newBackground: "Hero-girls.png", startData: "top 70%", triggerData: ".skill", prevBackground: "projet.png" })
   })
   return (
-    <Container className='skill' id='skill'>
+    <Container className='skill' id='h-section' >
       <Heading description='Découvrez mes compétences pour donner vie à vos idées numériques.' label='Compétences' />
       <ul className='skill_content'>
         <li>

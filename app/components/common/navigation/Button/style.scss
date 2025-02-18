@@ -4,33 +4,45 @@
   padding: 10px 20px;
   border-radius: 50px;
   gap: 10px;
+
   &:hover {
     .circle {
       scale: 1;
       @apply bg-yellow;
     }
+
     .text span {
       transform: translateY(-100%);
       transition: 0.3s ease-in-out;
     }
   }
+
+  &.active {
+    .circle {
+      scale: 1;
+      @apply bg-yellow;
+    }
+  }
+
   .text {
     @apply flex flex-col overflow-hidden text-sm;
     transition: 0.3s ease-in-out;
-    //mobile
     height: 20px;
+
     @screen lg {
       @apply text-base;
       height: 24px;
     }
   }
+
   .circle {
     width: 4px;
-    scale : 0.5;
+    scale: 0.5;
     aspect-ratio: 1/1;
     @apply bg-white rounded-full;
     transition: 0.25s ease-in-out;
   }
+
   &--primary {
     border: 2px solid;
     @apply text-white border-white;

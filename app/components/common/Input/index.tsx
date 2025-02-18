@@ -3,14 +3,15 @@ import "./style.scss"
 interface InputProps {
   className?: string;
   placeholder: string;
-  name :string
+  name: string;
+  type?: "text" | "email"
 }
 
 function Input(props: InputProps) {
-  const { placeholder, className = "" , name} = props
+  const { placeholder, className = "", name, type = "text" } = props
   return (
     <div className={`common-input ${className}`}>
-      <input type="text" placeholder={placeholder} name={name}/>
+      <input type={type} placeholder={placeholder} name={name} />
     </div>
   )
 }

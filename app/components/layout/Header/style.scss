@@ -6,7 +6,7 @@
     @apply flex justify-between items-center static;
     padding-block: 0;
 
-    .button {
+    .btn {
       @apply hidden;
       @screen lg {
         @apply flex;
@@ -22,10 +22,18 @@
       }
 
       .link {
-        @apply flex text-white items-center;
+        @apply flex text-white items-center cursor-pointer;
         gap: 10px;
         transition: 0.25s ease-in-out;
-        border-bottom: 3px solid transparent;
+        border-bottom: 1px solid transparent;
+        &.active {
+          @apply border-yellow text-yellow;
+
+          &::before {
+            scale: 1;
+            @apply bg-yellow;
+          }
+        }
 
         &::before {
           content: "";
@@ -36,15 +44,6 @@
           transition: 0.25s ease-in-out;
         }
 
-        &_active {
-          @apply border-yellow text-yellow;
-
-          &::before {
-            scale: 1;
-            @apply bg-yellow;
-          }
-        }
-
         &:hover {
           &::before {
             scale: 1;
@@ -52,7 +51,6 @@
           }
         }
       }
-
 
     }
 
@@ -69,7 +67,7 @@
         @apply hidden;
       }
 
-      button {
+      .btn {
         @apply flex;
       }
 
@@ -78,10 +76,19 @@
       }
 
       .link {
-        @apply flex text-white items-center;
+        @apply flex text-white items-center cursor-pointer;
         gap: 10px;
         transition: 0.25s ease-in-out;
-        border-bottom: 3px solid transparent;
+        border-bottom: 1px solid transparent;
+
+        &.active {
+          @apply border-yellow text-yellow;
+
+          &::before {
+            scale: 1;
+            @apply bg-yellow;
+          }
+        }
 
         &::before {
           content: "";
@@ -90,15 +97,6 @@
           @apply bg-white rounded-full;
           scale: 0.5;
           transition: 0.25s ease-in-out;
-        }
-
-        &_active {
-          @apply border-yellow text-yellow;
-
-          &::before {
-            scale: 1;
-            @apply bg-yellow;
-          }
         }
 
         &:hover {

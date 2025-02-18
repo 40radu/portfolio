@@ -1,24 +1,24 @@
 interface LinksProps {
   label: string;
-  href: string;
+  id: string;
 }
 
 const linksData: LinksProps[] = [
   {
     label: "Accueil",
-    href: "/"
-  },
-  {
-    label: "Service",
-    href: "/service"
+    id: "hero"
   },
   {
     label: "Compétences",
-    href: "/skill"
+    id: "skill"
   },
   {
-    label: "Projet",
-    href: "/project"
+    label: "Services",
+    id: "service"
+  },
+  {
+    label: "Projets",
+    id: "project"
   },
 
 ]

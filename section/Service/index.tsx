@@ -11,10 +11,10 @@ import { changeBg } from '@/app/animation/changeBg'
 
 function Service() {
   useGSAP(() => {
-    changeBg({ newBackground: "boss.png", startData: "top 70%", triggerData: `#service .heading`, prevBackground: "Hero-girls.png" })
+    changeBg({ newBackground: "boss.png", startData: "top 70%", triggerData: `.service .heading`, prevBackground: "Hero-girls.png" })
   })
   return (
-    <Container className='service' id='service'>
+    <Container className='service' id='h-section' key="service">
       <Heading label='Services' description='Voici un aperçu des services que je peux offrir pour votre projet.' />
       <ul className='service_content'>
         {

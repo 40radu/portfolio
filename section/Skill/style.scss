@@ -1,6 +1,6 @@
 .skill {
   @apply relative;
-  padding-bottom: 100px;
+  padding-block: 100px;
 
   @screen lg {
     @apply flex flex-col min-h-screen;

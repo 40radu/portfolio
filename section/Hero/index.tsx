@@ -5,7 +5,7 @@ import "./style.scss"
 
 function Hero() {
   return (
-    <Container className='hero'>
+    <Container className='hero' id='h-section'>
       <p className='hero_name'>Radonirina</p>
       <h2 className='hero_welcome'>Bienvenue sur mon <span className='yellow'>portfolio !</span></h2>
       <h1><span className='yellow'>Développeur Web</span> et <span className='yellow'>Designer</span> </h1>  

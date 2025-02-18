@@ -1,13 +1,10 @@
 .contact {
   @apply min-h-screen flex flex-col justify-center;
-  gap: 75px;
-
-  //mobile
-  padding-bottom: 50px;
+  padding-block:100px 50px;
   gap: 50px;
 
   @screen lg {
-    padding-bottom: 0;
+    padding-block: 0;
   }
 
   &_content {

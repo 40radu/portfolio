@@ -6,13 +6,14 @@ interface ButtonProps {
 	variant?: "primary" | "white" | "transparent";
 	className?: string;
 	type?: "submit" | "button";
-	onClick?: () => void
+	onClick?: () => void;
+	isDisable? : boolean
 }
 
 export default function Button(props: ButtonProps) {
-	const { label, variant = "primary", className = "", type = "button", onClick } = props;
+	const { label, variant = "primary", className = "", type = "button", onClick , isDisable = false} = props;
 	return (
-		<button type={type} className={`btn btn--${variant} ${className}`} onClick={onClick}>
+		<button type={type} className={`btn btn--${variant} ${className}`} onClick={onClick} disabled={isDisable}>
 			<p className="text">
 				<span>{label}</span>
 				<span>{label}</span>

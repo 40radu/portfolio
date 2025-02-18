@@ -7,13 +7,16 @@ import Javascript from './Javascript'
 import Git from './Git'
 import Figma from './Figma'
 import Vue from './Vue'
-import ReactJs from './ReactJs'
 import Sass from './Sass'
 import Ux from './Ux'
 import Balise from './Balise'
 import Email from './Email'
 import Location from './Location'
 import Whatsapp from './Whatsapp'
+import Redux from './Redux'
+import ReactJs from './ReactJs'
+import Gsap from './Gsap'
+import Html from './Html'
 
 
 const icon = {
@@ -24,13 +27,16 @@ const icon = {
   git: <Git />,
   figma: <Figma />,
   vue: <Vue />,
-  react: <ReactJs />,
+  redux: <Redux/>,
   sass: <Sass />,
   ux: <Ux />,
   balise: <Balise />,
   email: <Email />,
   location: <Location />,
-  whatsapp: <Whatsapp />
+  whatsapp: <Whatsapp />,
+  react : <ReactJs/>,
+  gsap : <Gsap/>,
+  html : <Html/>
 }
 
 export type IconType = typeof icon

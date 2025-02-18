@@ -14,16 +14,16 @@ const dataSkillFirst: SkillItemProps[] = [
     label: "Figma"
   },
   {
-    icon: 'react',
+    icon: 'redux',
     label: "Redux"
   },
   {
-    icon: 'figma',
-    label: "Figma"
+    icon: 'javascript',
+    label: "Javascript"
   },
   {
-    icon: 'react',
-    label: "Redux"
+    icon: 'vue',
+    label: "VueJs"
   }
 
 ]
@@ -45,64 +45,13 @@ const dataSkillSecond: SkillItemProps[] = [
     label: "ReactJs"
   },
   {
-    icon: 'react',
-    label: "Redux"
+    icon: 'gsap',
+    label: "Gsap"
   },
   {
-    icon: 'react',
-    label: "Redux"
-  }
-
-]
-
-const dataSkillAll: SkillItemProps[] = [
-  {
-    icon: 'next',
-    label: "NextJs"
-  },
-  {
-    icon: 'tailwind',
-    label: "Tailwind"
-  },
-  {
-    icon: 'figma',
-    label: "Figma"
-  },
-  {
-    icon: 'react',
-    label: "Redux"
-  },
-  {
-    icon: 'figma',
-    label: "Figma"
-  },
-  {
-    icon: 'react',
-    label: "Redux"
-  },
-  {
-    icon: 'typescript',
-    label: "Typescript"
-  },
-  {
-    icon: 'sass',
-    label: "Sass"
-  },
-  {
-    icon: 'git',
-    label: "GitHub"
-  },
-  {
-    icon: 'react',
-    label: "ReactJs"
-  },
-  {
-    icon: 'react',
-    label: "Redux"
-  },
-  {
-    icon: 'react',
-    label: "Redux"
+    icon: 'html',
+    label: "Html"
   }
 ]
-export { dataSkillFirst, dataSkillSecond, dataSkillAll }
+
+export { dataSkillFirst, dataSkillSecond }

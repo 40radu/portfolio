@@ -8,7 +8,7 @@ import { contactInfoData } from './data'
 
 function Contact() {
   return (
-    <Container className='contact'>
+    <Container className='contact' id='h-section'>
       <Heading description='Vous trouverez ci-après mes coordonnées' label='Contact' />
       <div className='contact_content'>
         <ul className='contact_content--infos'>
