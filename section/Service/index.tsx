@@ -11,7 +11,7 @@ import { changeBg } from '@/app/animation/changeBg'
 
 function Service() {
   useGSAP(() => {
-    changeBg({ newBackground: "boss.png", startData: "top 70%", triggerData: `.service .heading`, prevBackground: "Hero-girls.png" })
+    changeBg({ newBackground: "cesar.png", startData: "top 70%", triggerData: `.service .heading`, prevBackground: "Hero-girls.png" })
   })
   return (
     <Container className='service' id='h-section' key="service">
