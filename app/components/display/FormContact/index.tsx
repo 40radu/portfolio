@@ -22,9 +22,6 @@ interface IState {
 
 const initialState: IState = {
   errors: {
-    message: [""],
-    name: [""],
-    email: [""]
   },
   preField: {
     name: "",

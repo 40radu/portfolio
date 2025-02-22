@@ -4,8 +4,8 @@ import { z } from "zod"
 
 const schema = z.object({
   name: z.string({ invalid_type_error: "nom invalide" })
-    .min(4, { message: "4 lettres minimum" })
-    .regex(/^[a-zA-Z-\s]+$/, { message: "chiffres non autorisés" }),
+    .min(4)
+    .regex(/^[a-zA-Z-\s]+$/),
   email: z.string({ invalid_type_error: "email invalide" })
     .regex(/^[a-zA-Z0-9._]+@[a-z]+\.[a-z]{2,6}$/, { message: "email invalide" }),
   message: z.string().min(1, { message: "champ vide" })
