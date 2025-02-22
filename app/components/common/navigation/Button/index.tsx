@@ -1,5 +1,7 @@
+"use client"
 import React from "react";
 import "./style.scss"
+import { useFormStatus } from "react-dom";
 
 interface ButtonProps {
 	label: string;
@@ -7,18 +9,22 @@ interface ButtonProps {
 	className?: string;
 	type?: "submit" | "button";
 	onClick?: () => void;
-	isDisable? : boolean
 }
 
 export default function Button(props: ButtonProps) {
-	const { label, variant = "primary", className = "", type = "button", onClick , isDisable = false} = props;
+	const { pending } = useFormStatus()
+	const { label, variant = "primary", className = "", type = "button", onClick } = props;
 	return (
-		<button type={type} className={`btn btn--${variant} ${className}`} onClick={onClick} disabled={isDisable}>
+		<button
+			type={type}
+			className={`btn btn--${variant} ${className}`}
+			onClick={onClick}
+			disabled={pending}>
 			<p className="text">
 				<span>{label}</span>
 				<span>{label}</span>
 			</p>
-			<span className="circle"></span>	
+			<span className="circle"></span>
 		</button>
 	);
 }

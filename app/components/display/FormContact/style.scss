@@ -1,6 +1,15 @@
-
 .form-contact {
   @apply w-full flex flex-col items-center;
   gap: 30px;
-  
+
+  fieldset {
+    @apply w-full flex flex-col gap-1;
+    font-family: "Montserrat";
+    p {
+      @apply text-white text-xs font-medium;
+      &.error {
+        @apply text-red-600;
+      }
+    }
+  }
 }
