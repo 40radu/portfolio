@@ -3,11 +3,13 @@ import { CardProjectProps } from "@/app/components/card/CardProject";
 const dataProjectList: CardProjectProps[] = [
   {
     description: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi aliquid cupiditate in!",
-    title: "Title one"
+    title: "Hianatra",
+    imageSrc : "/hianatra.png"
   },
   {
     description: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi aliquid cupiditate in!",
-    title: "Title two",
+    title: "I-music",
+    imageSrc : "/hianatra.png"
   },
 ]
 export { dataProjectList }
