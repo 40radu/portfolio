@@ -23,7 +23,7 @@ export default function Button(props: ButtonProps) {
 			<p className="text">
 				{
 					pending == true ?
-						<span>En cours</span>
+						<>En cours</>
 						: <>
 							<span>{label}</span>
 							<span>{label}</span>

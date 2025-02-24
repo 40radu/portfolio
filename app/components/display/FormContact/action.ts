@@ -40,21 +40,12 @@ export async function rado(prev: unknown, formData: FormData) {
   console.log(resp)
   if (resp.data == null) {
     return {
-      status: "error"
+      status: "error",
+      preField: data
     }
   } else {
     return {
       status : "succes"
     }
   }
-
-  // if (resp.data !== null) {
-  //   return {
-  //     status: "succes"
-  //   }
-  // } else {
-  //   return {
-  //     status: "error"
-  //   }
-  // }
 }

@@ -44,7 +44,6 @@ function FormContact() {
       <Textarea name='message' placeholder='Message' defaultValue={state?.preField?.message as string} />
     </fieldset>
     <Button label='Envoyer' type='submit' />
-    <p className='text-white'>message done ? :</p>
     <ToastContainer />
   </form>
 }
