@@ -21,8 +21,14 @@ export default function Button(props: ButtonProps) {
 			onClick={onClick}
 			disabled={pending}>
 			<p className="text">
-				<span>{label}</span>
-				<span>{label}</span>
+				{
+					pending == true ?
+						<span>En cours</span>
+						: <>
+							<span>{label}</span>
+							<span>{label}</span>
+						</>
+				}
 			</p>
 			<span className="circle"></span>
 		</button>

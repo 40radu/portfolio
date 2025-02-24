@@ -1,6 +1,9 @@
 "use server"
 
 import { z } from "zod"
+import { Resend } from 'resend'
+
+const resendInstance = new Resend(process.env.RESEND_API_KEY)
 
 const schema = z.object({
   name: z.string({ invalid_type_error: "nom invalide" })
@@ -25,5 +28,27 @@ export async function rado(prev: unknown, formData: FormData) {
       preField: data
     }
   }
-  // SUCCESS
+  // SUCCESS FIELDS
+  const resp = await resendInstance.emails.send({
+    from: "onboarding@resend.dev",
+    subject: "Contact from portfolio",
+    to: "radurakotoarivelo@gmail.com",
+    text: `${data.email} : ${data.message}`,
+    replyTo: data.email as string
+  })
+
+  if (resp.data !== null) {
+    return {
+      response: {
+        message: "done",
+        succes: true
+      }
+    }
+  }
+  return {
+    response: {
+      message: "error",
+      succes: false
+    }
+  }
 }
