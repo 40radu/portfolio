@@ -37,18 +37,24 @@ export async function rado(prev: unknown, formData: FormData) {
     replyTo: data.email as string
   })
 
-  if (resp.data !== null) {
+  console.log(resp)
+  if (resp.data == null) {
     return {
-      response: {
-        message: "done",
-        succes: true
-      }
+      status: "error"
+    }
+  } else {
+    return {
+      status : "succes"
     }
   }
-  return {
-    response: {
-      message: "error",
-      succes: false
-    }
-  }
+
+  // if (resp.data !== null) {
+  //   return {
+  //     status: "succes"
+  //   }
+  // } else {
+  //   return {
+  //     status: "error"
+  //   }
+  // }
 }

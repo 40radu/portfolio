@@ -1,38 +1,35 @@
 
 "use client"
-import React, { useActionState } from 'react'
+import React, { useActionState, useEffect } from 'react'
 import Input from '../../common/Input'
 import "./style.scss"
 import { rado } from './action'
 import Textarea from '../../common/Textarea'
 import Button from '../../common/navigation/Button'
+import { ToastContainer } from 'react-toastify'
+import { showToast } from '@/utils/toast'
 
-interface IState {
-  errors: {
-    message?: string[] | undefined;
-    name?: string[] | undefined;
-    email?: string[] | undefined;
-  };
-  preField: {
-    name: FormDataEntryValue | null;
-    email: FormDataEntryValue | null;
-    message: FormDataEntryValue | null;
-  };
-  succes?: undefined;
-}
-
-const initialState: IState = {
+const initialState = {
   errors: {
   },
   preField: {
-    name: "rado",
-    email: "rado@gmail.com",
-    message: "message ito"
-  }, 
+    name: "",
+    email: "",
+    message: ""
+  },
 }
 
 function FormContact() {
   const [state, formAction] = useActionState(rado, initialState)
+
+  useEffect(() => {
+    if (state?.status == "error") {
+      showToast(false)
+    }
+    if (state?.status == "succes") {
+      showToast(true)
+    }
+  }, [state?.status])
 
   return <form action={formAction} className='form-contact'>
     <fieldset>
@@ -47,7 +44,8 @@ function FormContact() {
       <Textarea name='message' placeholder='Message' defaultValue={state?.preField?.message as string} />
     </fieldset>
     <Button label='Envoyer' type='submit' />
-    <p className='text-white'>message done ? : {state?.response?.message}</p>
+    <p className='text-white'>message done ? :</p>
+    <ToastContainer />
   </form>
 }
 
