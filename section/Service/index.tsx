@@ -1,18 +1,10 @@
-"use client"
 import Container from '@/app/components/common/Container'
 import Heading from '@/app/components/common/Heading'
 import ServiceItem from '@/app/components/display/ServiceItem'
 import "./style.scss"
 import { dataService } from './data'
-import { useGSAP } from '@gsap/react'
-import { changeBg } from '@/app/animation/changeBg'
-
-
 
 function Service() {
-  useGSAP(() => {
-    changeBg({ newBackground: "cesar.png", startData: "top 70%", triggerData: `.service .heading`, prevBackground: "Hero-girls.png" })
-  })
   return (
     <Container className='service' id='h-section' key="service">
       <Heading label='Services' description='Voici un aperçu des services que je peux offrir pour votre projet.' />

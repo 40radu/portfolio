@@ -7,6 +7,7 @@ import Button from '../../common/navigation/Button'
 import { linksData } from './data'
 import classNames from 'classnames'
 import { scrollTo } from '@/utils/scrollTo'
+import Link from 'next/link'
 
 
 function Header() {
@@ -59,7 +60,7 @@ function Header() {
   return (
     <header className='header'>
       <Container tag='div' className='header__content'>
-        <Logo />
+        <Link href={""}><Logo /></Link>
         <nav className='header__content-nav'>
           {linksData.map((link, id) => (
             <li key={`link-${id}`} data-link={link.id} className="link" onClick={() => goTo(link.id)}>{link.label}</li>

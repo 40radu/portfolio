@@ -15,7 +15,7 @@ import { Autoplay, Pagination } from 'swiper/modules'
 
 function Skill() {
   useGSAP(() => {
-    changeBg({ newBackground: "Hero-girls.png", startData: "top 70%", triggerData: ".skill", prevBackground: "projet.png" })
+    changeBg({ newBackground: "92.png", startData: "top 70%", triggerData: ".skill", prevBackground: "hero.png" })
   })
   return (
     <Container className='skill' id='h-section' >
