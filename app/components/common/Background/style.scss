@@ -3,7 +3,6 @@
   @apply w-full h-screen fixed top-0 left-0 right-0 bg-cover -z-10 grid
   grid-cols-6;
   background-position: center;
-  background-color: black;
   @screen lg {
     @apply grid-cols-10;
   }

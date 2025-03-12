@@ -1,0 +1,16 @@
+.footer {
+  @apply flex justify-center text-black text-xs font-medium;
+  padding-block: 20px;
+  font-family: "Montserrat";
+
+  span {
+    text-decoration: underline;
+    @apply text-white;
+    opacity: 0.4;
+  }
+  .yellow {
+    width: 3px;
+    height: 3px;
+    @apply inline-block bg-yellow ml-1 rounded-md;
+  }
+}

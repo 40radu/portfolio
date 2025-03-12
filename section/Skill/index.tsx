@@ -1,8 +1,6 @@
 "use client"
 import React from 'react'
 import { dataSkillFirst, dataSkillSecond } from './data'
-import { useGSAP } from '@gsap/react'
-import { changeBg } from '@/app/animation/changeBg'
 import Container from '@/app/components/common/Container'
 import Heading from '@/app/components/common/Heading'
 import SkillItem from '@/app/components/display/SkillItem'
@@ -14,9 +12,6 @@ import "swiper/css/autoplay";
 import { Autoplay, Pagination } from 'swiper/modules'
 
 function Skill() {
-  useGSAP(() => {
-    changeBg({ newBackground: "92.png", startData: "top 70%", triggerData: ".skill", prevBackground: "hero.png" })
-  })
   return (
     <Container className='skill' id='h-section' >
       <Heading description='Découvrez mes compétences pour donner vie à vos idées numériques.' label='Compétences' />

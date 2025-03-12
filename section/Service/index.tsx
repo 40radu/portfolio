@@ -7,7 +7,7 @@ import { dataService } from './data'
 function Service() {
   return (
     <Container className='service' id='h-section' key="service">
-      <Heading label='Services' description='Voici un aperçu des services que je peux offrir pour votre projet.' />
+      <Heading label='Services' description='Voici un aperçu des services que je peux vous offrir pour votre projet.' />
       <ul className='service_content'>
         {
           dataService.map((dt, id) => {

@@ -1,8 +1,21 @@
 .logo {
-  width: 55px;
-  height: 33px;
-  @screen lg {
-    width: 75px;
-    height: 53px;
+  @apply flex gap-1 items-end;
+  svg {
+    @apply w-fit;
+    height: 33px;
+    @screen lg {
+      height: 53px;
+    }
+  }
+
+  &__circle {
+    @apply bg-white rounded-full;
+    width: 16px;
+    aspect-ratio: 1/1;
+    scale: 150;
+    transform-origin: center;
+    @screen lg {
+      width: 25px;
+    }
   }
 }

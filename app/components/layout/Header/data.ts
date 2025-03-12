@@ -9,16 +9,16 @@ const linksData: LinksProps[] = [
     id: "hero"
   },
   {
-    label: "Compétences",
-    id: "skill"
-  },
-  {
     label: "Services",
     id: "service"
   },
   {
     label: "Projets",
     id: "project"
+  },
+  {
+    label: "Compétences",
+    id: "skill"
   },
 
 ]

@@ -18,8 +18,9 @@
   }
 
   &.active {
+    @apply border-yellow;
     .circle {
-      scale: 1;
+      scale: 1.2;
       @apply bg-yellow;
     }
   }

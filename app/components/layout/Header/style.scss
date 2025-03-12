@@ -57,11 +57,12 @@
     &-nav_mobile {
       @apply flex flex-col items-center w-full absolute left-0 top-0 text-white -z-10;
       gap: 20px;
-      padding-block: 150px 80px;
-      backdrop-filter: blur(8px);
+      padding-block: 160px 90px;
+      backdrop-filter: blur(30px);
       box-shadow: 1px 2px 20px rgba(#8d8d8d, 0.2);
       transform: translateY(-100%);
       transition: 0.3s ease-in-out;
+      border-radius: 0 0 30px 30px;
 
       @screen lg {
         @apply hidden;
